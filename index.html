@@ -1398,12 +1398,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   window.__i18n = { applyLang: applyLang, getLang: function(){ return currentLang; } };
 })();
 
-/* ============ 3D NEURAL NETWORK ============ */
+/* ============ 3D NEURAL NETWORK + INTERACTIVE PARTICLES ============ */
 (function(){
   try{
     if(!window.THREE) return;
     if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if(window.innerWidth < 720) return; // skip heavy 3D on mobile
+    if(window.innerWidth < 720) return;
     var canvas=document.getElementById("bg-canvas");
     var scene=new THREE.Scene();
     var camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,1000);
@@ -1411,32 +1411,58 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
     var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:true});
     renderer.setSize(window.innerWidth,window.innerHeight,false);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-    var NODES=window.innerWidth<720?55:100,RANGE=55,positions=[],velocities=[];
+
+    var NODES=window.innerWidth<720?55:120,RANGE=55,positions=[],velocities=[];
     for(var i=0;i<NODES;i++){
       positions.push((Math.random()-0.5)*RANGE*2,(Math.random()-0.5)*RANGE*2,(Math.random()-0.5)*RANGE*2);
-      velocities.push((Math.random()-0.5)*0.06,(Math.random()-0.5)*0.06,(Math.random()-0.5)*0.06);
+      velocities.push((Math.random()-0.5)*0.04,(Math.random()-0.5)*0.04,(Math.random()-0.5)*0.04);
     }
     var nodeGeo=new THREE.BufferGeometry();
     nodeGeo.setAttribute("position",new THREE.Float32BufferAttribute(positions,3));
-    scene.add(new THREE.Points(nodeGeo,new THREE.PointsMaterial({color:0x4DA3FF,size:0.6,transparent:true,opacity:0.9,blending:THREE.AdditiveBlending,depthWrite:false})));
-    var maxLines=NODES*5,linePositions=new Float32Array(maxLines*6),lineGeo=new THREE.BufferGeometry();
+    var points=new THREE.Points(nodeGeo,new THREE.PointsMaterial({color:0x4DA3FF,size:0.7,transparent:true,opacity:0.85,blending:THREE.AdditiveBlending,depthWrite:false}));
+    scene.add(points);
+
+    var maxLines=NODES*4,linePositions=new Float32Array(maxLines*6),lineGeo=new THREE.BufferGeometry();
     lineGeo.setAttribute("position",new THREE.BufferAttribute(linePositions,3));
-    scene.add(new THREE.LineSegments(lineGeo,new THREE.LineBasicMaterial({color:0x7C5CFF,transparent:true,opacity:0.25,blending:THREE.AdditiveBlending,depthWrite:false})));
-    var mouseX=0,mouseY=0;
-    window.addEventListener("mousemove",function(e){mouseX=(e.clientX/window.innerWidth-0.5)*2;mouseY=(e.clientY/window.innerHeight-0.5)*2});
+    scene.add(new THREE.LineSegments(lineGeo,new THREE.LineBasicMaterial({color:0x7C5CFF,transparent:true,opacity:0.22,blending:THREE.AdditiveBlending,depthWrite:false})));
+
+    // Subtle 3D geometric accent (torus knot)
+    var torus=new THREE.Mesh(
+      new THREE.TorusKnotGeometry(8,1.2,100,16),
+      new THREE.MeshBasicMaterial({color:0x22D3EE,wireframe:true,transparent:true,opacity:0.15})
+    );
+    torus.position.set(18,-8,-15);
+    scene.add(torus);
+
+    var mouseX=0,mouseY=0,mouseZ=0;
+    window.addEventListener("mousemove",function(e){
+      mouseX=(e.clientX/window.innerWidth-0.5)*40;
+      mouseY=(e.clientY/window.innerHeight-0.5)*-30;
+      mouseZ=0;
+    });
+
     var clock=new THREE.Clock();
     function animate(){
       requestAnimationFrame(animate);
       var t=clock.getElapsedTime(),pos=nodeGeo.attributes.position.array;
       for(var i=0;i<NODES;i++){
         var ix=i*3;
+        // gentle mouse attraction
+        var dx=mouseX-pos[ix],dy=mouseY-pos[ix+1];
+        var dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<25&&dist>0.1){
+          velocities[ix]+=dx*0.0008;
+          velocities[ix+1]+=dy*0.0008;
+        }
         pos[ix]+=velocities[ix];pos[ix+1]+=velocities[ix+1];pos[ix+2]+=velocities[ix+2];
+        velocities[ix]*=0.98;velocities[ix+1]*=0.98;velocities[ix+2]*=0.98;
         if(Math.abs(pos[ix])>RANGE)velocities[ix]*=-1;
         if(Math.abs(pos[ix+1])>RANGE)velocities[ix+1]*=-1;
         if(Math.abs(pos[ix+2])>RANGE)velocities[ix+2]*=-1;
       }
       nodeGeo.attributes.position.needsUpdate=true;
-      var lp=lineGeo.attributes.position.array,li=0,MD=14*14;
+
+      var lp=lineGeo.attributes.position.array,li=0,MD=13*13;
       for(var a=0;a<NODES&&li<maxLines*6;a++){
         for(var b=a+1;b<NODES&&li<maxLines*6;b++){
           var dx=pos[a*3]-pos[b*3],dy=pos[a*3+1]-pos[b*3+1],dz=pos[a*3+2]-pos[b*3+2];
@@ -1448,8 +1474,11 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
       }
       for(var k=li;k<maxLines*6;k++)lp[k]=0;
       lineGeo.attributes.position.needsUpdate=true;
-      scene.rotation.y=t*0.04+mouseX*0.15;
-      scene.rotation.x=Math.sin(t*0.2)*0.05+mouseY*0.1;
+
+      torus.rotation.x=t*0.15;
+      torus.rotation.y=t*0.2;
+      scene.rotation.y=t*0.03+mouseX*0.004;
+      scene.rotation.x=Math.sin(t*0.15)*0.04+mouseY*0.003;
       renderer.render(scene,camera);
     }
     animate();
