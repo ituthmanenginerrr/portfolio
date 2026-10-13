@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ituthmanenginerrr.github.io/portfolio/sitemap.xml

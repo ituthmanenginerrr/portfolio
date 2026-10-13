@@ -1,0 +1,52 @@
+/* Portfolio Othman ELKHAZRAJE — CSS léger, WCAG AA dark, reduced-motion */
+:root{
+  --bg:#05070F;--bg-2:#0A0F1F;--ink:#E8EEF8;--muted:#B0C0E0;--line:rgba(120,160,255,.18);
+  --accent:#4DA3FF;--accent-2:#7C5CFF;--accent-3:#22D3EE;--signal:#F5B942;
+  --success:#34D399;--glass:rgba(15,25,50,.6);--glass-strong:rgba(20,32,64,.8);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.skip{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:8px;z-index:100}
+.skip:focus{left:8px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:"IBM Plex Serif",Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-3)}
+:focus-visible{outline:2px solid var(--accent-3);outline-offset:3px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:sticky;top:0;z-index:10;background:rgba(5,7,15,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .links{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:var(--muted);font-size:14px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-3);border:1px solid rgba(34,211,238,.3);border-radius:100px;padding:6px 14px;background:rgba(34,211,238,.06)}
+.hero{padding:72px 0 40px}
+.hero h1{font-size:clamp(32px,5.5vw,56px);max-width:18em;background:linear-gradient(135deg,#fff,#B8CCFF 50%,#7C5CFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .lead{max-width:42em;color:var(--muted);font-size:18px;margin:20px 0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px;transition:transform .2s}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
+.btn-secondary{background:var(--glass);border:1px solid var(--line);color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:32px 0}
+.kpi{padding:16px;background:var(--glass);border:1px solid var(--line);border-radius:12px}
+.kpi b{display:block;font-size:26px;background:linear-gradient(135deg,var(--accent),var(--accent-3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.kpi span{color:var(--muted);font-size:12px;font-family:"JetBrains Mono",monospace}
+.mesure{font-size:11px;color:var(--muted);margin-top:6px;font-style:italic}
+section{padding:64px 0 0}
+section>h2{font-size:clamp(24px,4vw,36px);margin-bottom:10px}
+.section-sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.about p{color:var(--muted);font-size:16.5px;max-width:68ch}
+.roles,.offres{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.role,.offre{padding:22px;background:var(--glass);border:1px solid var(--line);border-radius:14px}
+.role h3,.offre h3{font-size:18px;color:#fff;margin-bottom:8px}
+.role p,.offre p{color:var(--muted);font-size:14.5px;margin:0 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags em{font-style:normal;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--accent-3);background:rgba(34,211,238,.08);padding:3px 8px;border-radius:100px}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.proj-card{padding:22px;background:var(--glass);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column}
+.proj-card h3{font-size:17px;margin-bottom:8px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{padding:18px 0;border-bottom:1px solid var(--line)}
+.tl time{font-family:"JetBrains Mono",monospace;color:var(--accent-3);font-size:13px}
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:720px){.wrap{padding:0 18px}.hero{padding:48px 0 24px}}
