@@ -5,17 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <meta name="description" content="Architecte SI & IA. Modernisation ERP (Odoo, Sage X3), infrastructure cloud sécurisée et IA appliquée pour environnements réglementés. Casablanca.">
+<meta name="description" content="Othman ELKHAZRAJE — Architecte SI & IA. Modernisation ERP (Odoo, Sage X3), architecture Cloud Azure, cybersécurité et intégration IA/NLP/LLM pour les systèmes d’entreprise. Casablanca, Maroc.">
 <meta name="author" content="Othman ELKHAZRAJE">
 <title>Othman ELKHAZRAJE — Architecte SI & IA | ERP, Cloud, Data | Casablanca</title>
 <link rel="canonical" href="https://ituthmanenginerrr.github.io/portfolio/">
+<meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Othman ELKHAZRAJE — Architecte SI & IA">
 <meta property="og:description" content="Je modernise vos ERP et sécurise vos systèmes pour rendre vos opérations plus fiables. Odoo, Sage X3, Azure, IA.">
+<meta property="og:description" content="J’optimise vos ERP et j’intègre l’IA pour automatiser et sécuriser vos opérations.">
 <meta property="og:url" content="https://ituthmanenginerrr.github.io/portfolio/">
 <meta property="og:image" content="https://ituthmanenginerrr.github.io/portfolio/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Othman ELKHAZRAJE — Architecte SI & IA">
 <meta name="twitter:description" content="ERP, Cloud, Infrastructure et IA pour environnements réglementés.">
+<meta name="twitter:description" content="Modernisation ERP, Cloud Azure, sécurité et intégration IA.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234DA3FF'/%3E%3Ctext x='16' y='22' font-size='15' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'%3EOE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,15 +32,30 @@
       "@id": "https://ituthmanenginerrr.github.io/portfolio/#person",
       "name": "Othman ELKHAZRAJE",
       "jobTitle": "Enterprise Systems & AI Architect",
+      "url": "https://ituthmanenginerrr.github.io/portfolio/",
       "email": "mailto:o.elkhazraje@gmail.com",
       "telephone": "+212664533139",
-      "address": {"@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA"},
-      "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "Azure Solutions Architect Expert", "offeredBy": "Microsoft"}],
-      "knowsAbout": ["ERP Administration", "Sage X3", "Odoo", "Artificial Intelligence", "NLP", "LLM", "Cloud Architecture", "Azure", "ISO 27001", "GDPR"],
-      "sameAs": ["https://www.linkedin.com/in/othman-elkhazraje/", "https://github.com/ituthmanenginerrr"]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Azure Solutions Architect Expert",
+          "offeredBy": {"@type": "Organization", "name": "Microsoft"}
+        }
+      ],
+      "knowsAbout": ["ERP Administration", "Sage X3", "Odoo", "Artificial Intelligence", "Natural Language Processing", "Large Language Models", "Cloud Architecture", "Microsoft Azure", "ISO 27001", "GDPR"],
+      "sameAs": [
+        "https://www.linkedin.com/in/othman-elkhazraje/",
+        "https://github.com/ituthmanenginerrr"
+      ]
     },
     {
       "@type": "Service",
+      "@id": "https://ituthmanenginerrr.github.io/portfolio/#service",
       "name": "Conseil & Architecture ERP, Cloud & IA",
       "provider": {"@id": "https://ituthmanenginerrr.github.io/portfolio/#person"},
       "areaServed": ["Morocco", "France", "Remote"],
@@ -1287,8 +1306,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
           <button type="submit" class="form-submit">
             <span data-fr="→ Envoyer le message" data-en="→ Send message">→ Envoyer le message</span>
           </button>
-          <p class="form-note" data-fr-html="Aucun cookie publicitaire." data-en-html="No advertising cookies.">
-            Aucun cookie publicitaire.
+          <p class="form-note" data-fr-html="Aucun cookie publicitaire. Le message ne sera envoyé qu’après validation dans votre messagerie." data-en-html="No advertising cookies. The message is sent only after you confirm it in your email client.">
+            Aucun cookie publicitaire. Le message ne sera envoyé qu’après validation dans votre messagerie.
           </p>
         </form>
       </div>
@@ -1329,7 +1348,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-/* ============ I18N ============ */
 (function(){
   var currentLang = "fr";
   var detailData = {
@@ -1404,7 +1422,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   window.__i18n = { applyLang: applyLang, getLang: function(){ return currentLang; } };
 })();
 
-/* ============ 3D NEURAL NETWORK + INTERACTIVE PARTICLES ============ */
 (function(){
   try{
     if(!window.THREE) return;
@@ -1453,6 +1470,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
     function animate(){
       requestAnimationFrame(animate);
       if(!running) return;
+    var animationFrame=0, running=false;
+    function animate(){
+      if(!running || document.hidden) return;
+      animationFrame=requestAnimationFrame(animate);
       var t=clock.getElapsedTime(),pos=nodeGeo.attributes.position.array;
       for(var i=0;i<NODES;i++){
         var ix=i*3;
@@ -1490,7 +1511,22 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
       scene.rotation.x=Math.sin(t*0.15)*0.04+mouseY*0.003;
       renderer.render(scene,camera);
     }
-    animate();
+    function startAnimation(){
+      if(running || document.hidden) return;
+      running=true;
+      clock.start();
+      animationFrame=requestAnimationFrame(animate);
+    }
+    function stopAnimation(){
+      running=false;
+      if(animationFrame) cancelAnimationFrame(animationFrame);
+      animationFrame=0;
+    }
+    document.addEventListener("visibilitychange",function(){
+      if(document.hidden) stopAnimation();
+      else startAnimation();
+    });
+    startAnimation();
     window.addEventListener("resize",function(){
       camera.aspect=window.innerWidth/window.innerHeight;
       camera.updateProjectionMatrix();
@@ -1499,7 +1535,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   }catch(e){}
 })();
 
-/* ============ PROJECT FILTERS ============ */
 (function(){
   var btns=document.querySelectorAll(".proj-filters button");
   var cards=document.querySelectorAll("#proj-grid article");
@@ -1516,7 +1551,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   });
 })();
 
-/* ============ 3D CARD EFFECT ============ */
 (function(){
   document.querySelectorAll(".proj article").forEach(function(card){
     card.addEventListener("mousemove",function(e){
@@ -1527,7 +1561,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   });
 })();
 
-/* ============ SCROLL REVEAL ============ */
 (function(){
   var els=document.querySelectorAll(".reveal");
   if(!("IntersectionObserver" in window)){els.forEach(function(el){el.classList.add("visible")});return;}
@@ -1537,7 +1570,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   els.forEach(function(el){io.observe(el)});
 })();
 
-/* ============ CONTACT FORM ============ */
 (function(){
   var form=document.getElementById("contact-form");
   var ok=document.getElementById("form-ok");
@@ -1594,9 +1626,11 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
     var bodyLines = [L.from + " : " + name, L.email + " : " + email, L.subject + " : " + (L.subjects[subjectKey] || subjectKey), "", L.message + " :", message];
     var mailto = "mailto:o.elkhazraje@gmail.com?subject=" + encodeURIComponent(subjectLine) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
 
+    ok.textContent = lang === "fr"
+      ? "Votre brouillon va s’ouvrir. Cliquez sur Envoyer dans votre messagerie. Si rien ne s’ouvre, contactez-moi directement à o.elkhazraje@gmail.com."
+      : "Your email draft will open. Click Send in your email client. If nothing opens, contact me directly at o.elkhazraje@gmail.com.";
     ok.classList.add("show");
-    setTimeout(function(){ window.location.href = mailto; }, 400);
-    setTimeout(function(){ form.reset(); setTimeout(function(){ ok.classList.remove("show"); }, 4000); }, 1500);
+    window.location.href = mailto;
   });
 })();
 </script>
