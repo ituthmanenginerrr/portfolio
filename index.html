@@ -32,21 +32,27 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Othman ELKHAZRAJE",
-  "jobTitle": "Consultant ERP, Cloud, Infrastructure, Data & IA",
-  "description": "Consultant ERP (Odoo, Sage X3) et Doctorant en IA (NLP/LLM). Spécialiste des environnements réglementés (pharma, automobile).",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Casablanca",
-    "addressCountry": "MA"
-  },
-  "url": "https://www.linkedin.com/in/othman-elkhazraje",
-  "sameAs": [
-    "https://www.linkedin.com/in/othman-elkhazraje",
-    "https://github.com/ituthmanenginerrr"
-  ],
-  "knowsAbout": ["Odoo", "Sage X3", "ERP", "DevOps", "NLP", "LLM", "ISO 27001", "RGPD"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ituthmanenginerrr.github.io/portfolio/#person",
+      "name": "Othman ELKHAZRAJE",
+      "jobTitle": "Enterprise Systems & AI Architect",
+      "email": "mailto:o.elkhazraje@gmail.com",
+      "telephone": "+212664533139",
+      "address": {"@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA"},
+      "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "Azure Solutions Architect Expert", "offeredBy": "Microsoft"}],
+      "knowsAbout": ["ERP Administration", "Sage X3", "Odoo", "Artificial Intelligence", "NLP", "LLM", "Cloud Architecture", "Azure", "ISO 27001", "GDPR"],
+      "sameAs": ["https://www.linkedin.com/in/othman-elkhazraje/", "https://github.com/ituthmanenginerrr"]
+    },
+    {
+      "@type": "Service",
+      "name": "Conseil & Architecture ERP, Cloud & IA",
+      "provider": {"@id": "https://ituthmanenginerrr.github.io/portfolio/#person"},
+      "areaServed": ["Morocco", "France", "Remote"],
+      "serviceType": "IT Consulting & AI Engineering"
+    }
+  ]
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -323,9 +329,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 
   <!-- HERO -->
   <header class="hero">
-    <span class="eyebrow" data-fr="◆ Je résous et réalise vos besoins IT — ERP, infra, data ou IA" data-en="◆ I solve and deliver your IT needs — ERP, infra, data or AI">◆ Je résous et réalise vos besoins IT — ERP, infra, data ou IA</span>
-    <h1 data-fr="Je connecte les ERP d'entreprise à la data et à l'IA — en environnement réglementé." data-en="I connect enterprise ERPs to data and AI — in regulated environments.">Je connecte les ERP d'entreprise à la data et à l'IA — en environnement réglementé.</h1>
-    <p class="lead" data-fr="Consultant ERP (Odoo, Sage X3), Administrateur Systèmes & Réseau, et Doctorant en IA (NLP / LLM). J'accompagne les PME et ETI (pharma, automobile) dans la migration, la sécurisation et l'automatisation de leurs systèmes métiers — puis j'y greffe des modèles IA quand c'est pertinent et conforme." data-en="ERP Consultant (Odoo, Sage X3), Systems & Network Administrator, and PhD Researcher in AI (NLP / LLM). I help SMBs and mid-caps (pharma, automotive) migrate, secure and automate their business systems — then graft on AI models when relevant and compliant.">Consultant ERP (Odoo, Sage X3), Administrateur Systèmes & Réseau, et Doctorant en IA (NLP / LLM). J'accompagne les PME et ETI (pharma, automobile) dans la migration, la sécurisation et l'automatisation de leurs systèmes métiers — puis j'y greffe des modèles IA quand c'est pertinent et conforme.</p>
+    <span class="eyebrow" data-fr="◆ Architecte SI & IA · Azure Solutions Architect Expert" data-en="◆ Enterprise Systems & AI Architect · Azure Solutions Architect Expert">◆ Architecte SI & IA · Azure Solutions Architect Expert</span>
+    <h1 data-fr="J'optimise vos ERP et j'intègre l'IA pour automatiser et sécuriser vos opérations." data-en="I optimize your ERPs and integrate AI to automate and secure your operations.">J'optimise vos ERP et j'intègre l'IA pour automatiser et sécuriser vos opérations.</h1>
+    <p class="lead" data-fr="Architecte SI & IA. J'accompagne les entreprises réglementées (pharma, automobile) dans la modernisation de leurs ERP (Odoo, Sage X3), la sécurisation de l'infrastructure et l'intégration d'IA décisionnelle. Azure Solutions Architect Expert · Doctorant NLP/LLM." data-en="Enterprise Systems & AI Architect. I help regulated companies (pharma, automotive) modernize their ERPs (Odoo, Sage X3), secure infrastructure and integrate decision AI. Azure Solutions Architect Expert · PhD Researcher NLP/LLM.">Architecte SI & IA. J'accompagne les entreprises réglementées (pharma, automobile) dans la modernisation de leurs ERP (Odoo, Sage X3), la sécurisation de l'infrastructure et l'intégration d'IA décisionnelle. Azure Solutions Architect Expert · Doctorant NLP/LLM.</p>
 
     <div class="hero-actions">
       <a href="#contact" class="btn-primary" data-fr="→ Demander un devis" data-en="→ Request a quote">→ Demander un devis</a>

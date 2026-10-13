@@ -1,0 +1,21 @@
+# Othman ELKHAZRAJE — Enterprise Systems & AI Architect
+
+## Positionnement
+Architecte SI & IA. J'optimise les ERP (Odoo, Sage X3) et j'intègre l'IA pour automatiser et sécuriser les opérations en environnements réglementés (pharma, automobile).
+
+## Certifications & Formation
+- Azure Solutions Architect Expert (Microsoft, 2024)
+- Doctorat en Intelligence Artificielle (NLP / LLM) — ESI Rabat, depuis 2023
+- Master spécialisé Traitement intelligent des systèmes — Université Mohammed V
+
+## Expérience clé
+- DEKRA Automotive : migration ERP 100+ utilisateurs, 0 dépassement, −30 % incidents sécurité
+- Kosmopharma / Steripharma : infra critique 99,9 %, PRA/PCA RTO < 4h, conformité BPF/GMP
+- AGENZ : pipelines NLP, architecture cloud RGPD
+
+## Contact
+- Email : o.elkhazraje@gmail.com
+- Téléphone : +212 664 533 139
+- LinkedIn : https://www.linkedin.com/in/othman-elkhazraje
+- Portfolio : https://ituthmanenginerrr.github.io/portfolio/
+- Calendly : https://calendly.com/othman-elkhazraje
