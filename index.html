@@ -273,14 +273,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 .cta-fixe:hover{background:rgba(77,163,255,.15);border-color:var(--accent);transform:translateY(-2px);color:var(--ink)}
 </style>
 <style>
-/* Cinematic enhancements — content unchanged */
-.hero h1,.hero .lead,.hero-actions,.kpis,.chain{opacity:0;transform:translateY(24px)}
-.hero h1.reveal,.hero .lead.reveal,.hero-actions.reveal,.kpis.reveal,.chain.reveal{opacity:1;transform:none;transition:all .9s cubic-bezier(.2,.8,.2,1)}
-.proj article{transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
-.proj article:hover{transform:translateY(-8px) rotateX(2deg)}
+/* Cinematic enhancements — content always visible */
+.hero h1,.hero .lead,.hero-actions,.kpis,.chain{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
-  .hero h1,.hero .lead,.hero-actions,.kpis,.chain{opacity:1;transform:none}
-  .proj article:hover{transform:none}
+  *{animation:none!important;transition:none!important}
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
