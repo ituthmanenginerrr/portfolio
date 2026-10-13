@@ -1,167 +1,1574 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" id="html-root">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Othman ELKHAZRAJE — Consultant ERP + IA | Environnements réglementés</title>
-<meta name="description" content="Consultant ERP (Odoo, Sage X3) + IA pour environnements réglementés (pharma, automobile). Migration, sécurisation et pipelines IA. Casablanca.">
-<link rel="canonical" href="https://ituthmanenginerrr.github.io/portfolio/">
-<meta property="og:url" content="https://ituthmanenginerrr.github.io/portfolio/">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Othman ELKHAZRAJE — Consultant ERP (Odoo, Sage X3) + IA pour environnements réglementés (pharma, automobile). Migration, sécurisation, automatisation et pipelines IA. Casablanca.">
+<meta name="author" content="Othman ELKHAZRAJE">
+<title>Othman ELKHAZRAJE — Consultant ERP + IA | Environnements Réglementés</title>
 <meta property="og:title" content="Othman ELKHAZRAJE — Consultant ERP + IA pour environnements réglementés">
-<meta property="og:description" content="Je connecte les ERP d'entreprise à la data et à l'IA — en environnement réglementé.">
-<meta property="og:image" content="https://ituthmanenginerrr.github.io/portfolio/assets/img/og.png">
-<link rel="alternate" hreflang="fr" href="https://ituthmanenginerrr.github.io/portfolio/">
-<link rel="alternate" hreflang="en" href="https://ituthmanenginerrr.github.io/portfolio/en/">
-<link rel="alternate" hreflang="x-default" href="https://ituthmanenginerrr.github.io/portfolio/">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" as="style">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<meta property="og:description" content="Je connecte les ERP d'entreprise à la data et à l'IA. Expert Odoo / Sage X3, Infrastructure & NLP/LLM. PME/ETI pharma & automobile. Casablanca.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://othman-elkhazraje.com">
+<meta property="og:image" content="https://othman-elkhazraje.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Othman ELKHAZRAJE — Consultant ERP + IA">
+<meta name="twitter:description" content="ERP, Cloud, Infrastructure, Data & IA pour environnements réglementés. Casablanca, Maroc.">
+<link rel="canonical" href="https://othman-elkhazraje.com">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Othman ELKHAZRAJE","jobTitle":"Consultant ERP, Cloud, Data & IA","address":{"@type":"PostalAddress","addressLocality":"Casablanca","addressCountry":"MA"},"url":"https://www.linkedin.com/in/othman-elkhazraje","sameAs":["https://www.linkedin.com/in/othman-elkhazraje","https://github.com/ituthmanenginerrr"],"knowsAbout":["Odoo","Sage X3","ERP","NLP","LLM","MLOps"]}
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Othman ELKHAZRAJE",
+  "jobTitle": "Consultant ERP, Cloud, Infrastructure, Data & IA",
+  "description": "Consultant ERP (Odoo, Sage X3) et Doctorant en IA (NLP/LLM). Spécialiste des environnements réglementés (pharma, automobile).",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Casablanca",
+    "addressCountry": "MA"
+  },
+  "url": "https://www.linkedin.com/in/othman-elkhazraje",
+  "sameAs": [
+    "https://www.linkedin.com/in/othman-elkhazraje",
+    "https://github.com/ituthmanenginerrr"
+  ],
+  "knowsAbout": ["Odoo", "Sage X3", "ERP", "DevOps", "NLP", "LLM", "ISO 27001", "RGPD"]
+}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Othman ELKHAZRAJE — Consultant ERP + IA","areaServed":"MA","serviceType":["Migration ERP","Pipelines IA","Infrastructure sécurisée"]}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05070F;--bg-2:#0A0F1F;--ink:#E8EEF8;--muted:#A8B8D8;--line:rgba(120,160,255,.15);
+  --accent:#4DA3FF;--accent-2:#7C5CFF;--accent-3:#22D3EE;--signal:#F5B942;
+  --success:#34D399;--warn:#F87171;
+  --glass:rgba(15,25,50,.55);--glass-strong:rgba(20,32,64,.75);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#bg-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.vignette{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,transparent 0%,rgba(5,7,15,.6) 70%,rgba(5,7,15,.95) 100%)}
+.wrap{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:"IBM Plex Serif",Georgia,serif;font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-3)}
+:focus-visible{outline:2px solid var(--accent-3);outline-offset:3px;border-radius:2px}
+
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:14px;position:sticky;top:0;z-index:10;background:rgba(5,7,15,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav .links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+nav a{color:var(--muted);font-weight:500;letter-spacing:.02em;transition:color .2s;font-size:13.5px}
+nav a:hover{color:var(--ink)}
+.status{display:inline-flex;align-items:center;gap:9px;color:var(--muted);font-size:12.5px;font-family:"JetBrains Mono",monospace}
+.status i{width:8px;height:8px;border-radius:50%;background:#22D3EE;box-shadow:0 0 12px #22D3EE,0 0 24px rgba(34,211,238,.5);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+.lang-toggle{display:inline-flex;background:var(--glass);border:1px solid var(--line);border-radius:100px;overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:12px}
+.lang-toggle button{background:transparent;border:0;color:var(--muted);padding:6px 12px;cursor:pointer;font-family:inherit;font-size:inherit;letter-spacing:.05em;transition:all .2s}
+.lang-toggle button[aria-pressed="true"]{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
+
+.hero{padding:80px 0 48px;position:relative}
+.hero .eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-3);letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px;display:inline-block;padding:7px 16px;border:1px solid rgba(34,211,238,.3);border-radius:100px;background:rgba(34,211,238,.05)}
+.hero h1{font-size:clamp(32px,5.8vw,58px);max-width:20em;letter-spacing:-.025em;background:linear-gradient(135deg,#fff 0%,#B8CCFF 40%,#7C5CFF 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{max-width:42em;color:var(--muted);font-size:18px;margin:24px 0 0}
+.hero-actions{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;padding:13px 24px;border-radius:10px;font-weight:600;font-size:14px;transition:all .3s;box-shadow:0 8px 24px rgba(77,163,255,.3);display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(77,163,255,.5);color:#fff}
+.btn-secondary{background:var(--glass);border:1px solid var(--line);color:var(--ink);padding:13px 24px;border-radius:10px;font-weight:600;font-size:14px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-secondary:hover{border-color:var(--accent);background:rgba(77,163,255,.1);transform:translateY(-2px)}
+
+.who{margin:28px 0 0;color:var(--muted);font-size:14px;font-family:"JetBrains Mono",monospace;display:flex;flex-wrap:wrap;gap:20px}
+.who b{color:var(--ink);font-weight:500}
+.who span{display:inline-flex;align-items:center;gap:8px}
+.who span::before{content:"◆";color:var(--accent-3);font-size:9px}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:40px 0 0}
+.kpi{padding:20px 18px;background:var(--glass);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s cubic-bezier(.2,.8,.2,1)}
+.kpi:hover{transform:translateY(-4px);border-color:rgba(77,163,255,.4);box-shadow:0 16px 40px rgba(77,163,255,.15)}
+.kpi b{display:block;font-family:"IBM Plex Serif",serif;font-size:28px;font-weight:600;background:linear-gradient(135deg,var(--accent),var(--accent-3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.02em}
+.kpi span{color:var(--muted);font-size:12.5px;font-family:"JetBrains Mono",monospace;display:block;margin-top:4px;line-height:1.4}
+
+.chain{margin:48px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;perspective:1200px}
+.chain li{display:flex;align-items:center}
+.chain button{font:500 13.5px "IBM Plex Sans",sans-serif;color:var(--ink);background:var(--glass);border:1px solid var(--line);padding:12px 16px;border-radius:10px;cursor:pointer;transition:all .3s cubic-bezier(.2,.8,.2,1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform-style:preserve-3d;position:relative}
+.chain button::before{content:"";position:absolute;inset:0;border-radius:10px;background:linear-gradient(135deg,rgba(77,163,255,.15),rgba(124,92,255,.15));opacity:0;transition:opacity .3s}
+.chain button:hover{transform:translateY(-4px) rotateX(8deg);border-color:rgba(77,163,255,.5);box-shadow:0 12px 32px rgba(77,163,255,.2),0 0 0 1px rgba(77,163,255,.2)}
+.chain button:hover::before{opacity:1}
+.chain button[aria-pressed="true"]{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent;color:#fff;box-shadow:0 8px 32px rgba(124,92,255,.5),0 0 0 1px rgba(255,255,255,.1) inset}
+.chain button[aria-pressed="true"]::before{opacity:0}
+.detail{margin:22px 0 0;padding:24px 28px;background:var(--glass-strong);border:1px solid var(--line);border-left:3px solid var(--accent-3);border-radius:12px;min-height:105px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 20px 60px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05)}
+.detail strong{display:block;font-family:"IBM Plex Serif",serif;font-size:18.5px;margin-bottom:8px;color:#fff}
+.detail span{color:var(--muted);font-size:15.5px;line-height:1.6}
+.hint{font-size:12.5px;color:var(--muted);margin:12px 0 0;font-family:"JetBrains Mono",monospace;opacity:.7}
+
+section{padding:76px 0 0;position:relative}
+section>h2{font-size:clamp(26px,4.2vw,40px);margin-bottom:12px;display:flex;align-items:center;gap:16px}
+section>h2::before{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:2px}
+.section-sub{color:var(--muted);font-size:15px;margin:0 0 36px;max-width:62ch}
+
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:44px;margin-top:8px}
+.about-text p{color:var(--muted);font-size:16.5px;line-height:1.75;margin:0 0 18px}
+.about-text p strong{color:var(--ink);font-weight:600}
+.about-text .hl{color:var(--accent-3);font-weight:500}
+.about-cards{display:flex;flex-direction:column;gap:14px}
+.acard{padding:20px 22px;background:var(--glass);border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s}
+.acard:hover{transform:translateX(6px);border-color:rgba(34,211,238,.35)}
+.acard b{display:block;color:#fff;font-size:13.5px;font-family:"JetBrains Mono",monospace;margin-bottom:6px;letter-spacing:.02em}
+.acard span{color:var(--muted);font-size:14px;line-height:1.55}
+
+.objectif{padding:24px 26px;background:linear-gradient(135deg,rgba(77,163,255,.08),rgba(124,92,255,.08));border:1px solid rgba(77,163,255,.25);border-radius:14px;margin-top:24px}
+.objectif b{display:block;color:var(--accent-3);font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.objectif p{margin:0;color:var(--ink);font-size:15.5px;line-height:1.7}
+
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;perspective:1400px}
+.role{position:relative;padding:26px 24px;background:var(--glass);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .35s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.role::before{content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--accent),var(--accent-2));opacity:.6;transition:opacity .3s}
+.role:hover{transform:translateY(-6px);border-color:rgba(77,163,255,.4);box-shadow:0 24px 56px rgba(0,0,0,.4),0 0 40px rgba(77,163,255,.12)}
+.role:hover::before{opacity:1}
+.role .lvl{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--signal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;display:inline-block;padding:3px 9px;border-radius:100px;background:rgba(245,185,66,.08);border:1px solid rgba(245,185,66,.22)}
+.role h3{font-size:18px;color:#fff;margin-bottom:10px}
+.role p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.role .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.role .tags em{font-style:normal;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--accent-3);background:rgba(34,211,238,.07);padding:3px 8px;border-radius:100px;border:1px solid rgba(34,211,238,.15)}
+
+/* MÉTHODOLOGIE PHASES */
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:0 0 36px}
+.phase{padding:20px 16px;background:var(--glass);border:1px solid var(--line);border-radius:12px;text-align:center;position:relative;transition:all .3s}
+.phase:hover{transform:translateY(-4px);border-color:rgba(77,163,255,.4);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.phase .num{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--accent-3);letter-spacing:.15em;margin-bottom:8px;display:block}
+.phase h4{font-size:15px;color:#fff;margin-bottom:6px;font-family:"IBM Plex Serif",serif}
+.phase p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.5}
+.phase::after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:18px;opacity:.5}
+.phase:last-child::after{display:none}
+@media (max-width:720px){.phase::after{content:"↓";right:50%;top:auto;bottom:-22px;transform:translateX(50%)}.phase:last-child::after{display:none}}
+
+/* BLUEPRINTS */
+.blueprints{display:grid;grid-template-columns:1fr;gap:26px}
+.blueprint{padding:28px 26px;background:var(--glass);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s;overflow:hidden;position:relative}
+.blueprint:hover{border-color:rgba(34,211,238,.35);box-shadow:0 20px 48px rgba(0,0,0,.35)}
+.blueprint-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}
+.blueprint-head h3{font-size:19px;color:#fff;margin-bottom:6px}
+.blueprint-head p{margin:0;color:var(--muted);font-size:14px;max-width:62ch}
+.blueprint-head .badge-mini{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--accent-3);background:rgba(34,211,238,.08);padding:4px 10px;border-radius:100px;border:1px solid rgba(34,211,238,.2);white-space:nowrap}
+.blueprint svg{width:100%;height:auto;display:block;margin-top:8px;border-radius:10px}
+
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:120px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--line) 10%,var(--line) 90%,transparent)}
+.tl li{display:grid;grid-template-columns:96px 1fr;gap:8px 48px;padding:24px 0;position:relative;transition:transform .3s}
+.tl li::before{content:"";position:absolute;left:114px;top:32px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 16px rgba(77,163,255,.6);z-index:1}
+.tl li:hover{transform:translateX(6px)}
+.tl li:hover::before{background:var(--accent-3);border-color:var(--accent-3);box-shadow:0 0 24px rgba(34,211,238,.8)}
+.tl time{font-family:"JetBrains Mono",monospace;font-weight:500;color:var(--accent-3);font-size:14px;padding-top:4px}
+.tl h3{font-size:18.5px;color:#fff}
+.tl .org{color:var(--accent);font-size:13px;margin:4px 0 10px;font-family:"JetBrains Mono",monospace}
+.tl p{margin:0;max-width:64ch;color:var(--muted);font-size:15.5px;line-height:1.6}
+
+.proj-filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.proj-filters button{font:500 12.5px "IBM Plex Sans",sans-serif;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 14px;border-radius:100px;cursor:pointer;transition:all .25s;font-family:"JetBrains Mono",monospace;letter-spacing:.02em}
+.proj-filters button:hover{color:var(--ink);border-color:rgba(77,163,255,.4)}
+.proj-filters button[aria-pressed="true"]{color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;perspective:1400px}
+.proj article{position:relative;padding:26px 24px;background:var(--glass);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:all .4s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d;overflow:hidden;display:flex;flex-direction:column}
+.proj article::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(77,163,255,.18),transparent 40%);opacity:0;transition:opacity .4s;pointer-events:none}
+.proj article:hover{transform:translateY(-8px) rotateX(4deg) rotateY(-2deg);border-color:rgba(77,163,255,.4);box-shadow:0 32px 64px rgba(0,0,0,.5),0 0 0 1px rgba(77,163,255,.2),0 0 40px rgba(77,163,255,.15)}
+.proj article:hover::before{opacity:1}
+.proj article.hidden{display:none}
+.proj h3{font-size:18px;color:#fff;margin-bottom:8px}
+.proj .tag{font-family:"JetBrains Mono",monospace;color:var(--signal);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;display:inline-block;padding:3px 9px;border-radius:100px;background:rgba(245,185,66,.1);border:1px solid rgba(245,185,66,.25);align-self:flex-start}
+.proj .case{display:grid;gap:10px;margin:0 0 14px}
+.proj .case-row{display:grid;grid-template-columns:80px 1fr;gap:10px;font-size:14px;color:var(--muted);line-height:1.55}
+.proj .case-row b{color:var(--accent-3);font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;padding-top:2px}
+.proj .chart{margin:12px 0 14px;padding:12px;background:rgba(5,7,15,.5);border:1px solid var(--line);border-radius:10px}
+.proj .chart svg{width:100%;height:auto;display:block}
+.proj .chart .chart-title{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;text-align:center}
+.proj .impact{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.proj .impact span{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--success);background:rgba(52,211,153,.08);padding:3px 9px;border-radius:100px;border:1px solid rgba(52,211,153,.2)}
+.proj .stack{color:var(--accent-3);font-size:12px;font-family:"JetBrains Mono",monospace;padding-top:14px;border-top:1px solid var(--line);margin-top:auto}
+.proj .gh-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted);background:rgba(120,160,255,.06);padding:5px 10px;border-radius:6px;border:1px solid rgba(120,160,255,.15);transition:all .2s;width:fit-content}
+.proj .gh-link:hover{color:#fff;background:rgba(77,163,255,.15);border-color:rgba(77,163,255,.4);transform:translateY(-1px)}
+.proj .gh-link svg{width:13px;height:13px;fill:currentColor}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.skill-card{padding:22px 20px;background:var(--glass);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s}
+.skill-card:hover{border-color:rgba(77,163,255,.35);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.skill-card h3{font-size:14.5px;color:#fff;font-family:"JetBrains Mono",monospace;letter-spacing:.02em;margin-bottom:14px;display:flex;align-items:center;gap:10px;font-weight:500}
+.skill-card h3::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent-3);box-shadow:0 0 8px var(--accent-3);flex-shrink:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);background:rgba(77,163,255,.06);padding:5px 11px;border-radius:6px;border:1px solid rgba(120,160,255,.12);transition:all .2s}
+.chips span:hover{color:var(--ink);background:rgba(77,163,255,.12);border-color:rgba(77,163,255,.3);transform:translateY(-1px)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.two ul{list-style:none;margin:0;padding:0}
+.two li{padding:16px 0;border-bottom:1px solid var(--line);transition:padding-left .3s;font-size:15px}
+.two li:hover{padding-left:10px}
+.two li:first-child{border-top:1px solid var(--line)}
+.two small{display:block;color:var(--muted);font-size:13px;margin-top:4px;font-family:"JetBrains Mono",monospace}
+.two h2{margin-bottom:22px;font-size:24px}
+
+.contact{padding:96px 0 76px}
+.contact .head{text-align:center;margin-bottom:44px}
+.contact h2{font-size:clamp(28px,5vw,48px);max-width:18em;margin:0 auto;background:linear-gradient(135deg,#fff,#7C5CFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.contact .head p{color:var(--muted);max-width:42em;margin:18px auto 0}
+.form-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;max-width:1020px;margin:0 auto}
+.form-card{padding:30px;background:var(--glass-strong);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.form-card h3{font-size:19px;color:#fff;margin-bottom:6px}
+.form-card .fc-sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;background:rgba(5,7,15,.6);border:1px solid var(--line);border-radius:9px;color:var(--ink);font:400 15px "IBM Plex Sans",sans-serif;transition:all .2s;font-family:inherit}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(77,163,255,.15);background:rgba(5,7,15,.85)}
+.field textarea{min-height:120px;resize:vertical;font-family:inherit}
+.field select{cursor:pointer;appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.field select option{background:#0E1626;color:var(--ink)}
+.form-submit{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;padding:14px 28px;border:0;border-radius:10px;font:600 15px "IBM Plex Sans",sans-serif;cursor:pointer;transition:all .3s;box-shadow:0 8px 32px rgba(124,92,255,.35);width:100%;justify-content:center;margin-top:8px}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(124,92,255,.5)}
+.form-note{font-size:12px;color:var(--muted);margin-top:14px;text-align:center;font-family:"JetBrains Mono",monospace;line-height:1.5}
+.form-note a{color:var(--accent-3)}
+.form-ok{display:none;padding:14px 18px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);border-radius:10px;color:var(--success);font-size:14px;margin-bottom:16px;font-family:"JetBrains Mono",monospace}
+.form-ok.show{display:block;animation:slideIn .3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+.contact-side{display:flex;flex-direction:column;gap:14px}
+.cinfo{padding:22px;background:var(--glass);border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s}
+.cinfo:hover{transform:translateX(4px);border-color:rgba(34,211,238,.35)}
+.cinfo b{display:block;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.cinfo span,.cinfo a{color:var(--ink);font-size:15px;word-break:break-word}
+.cinfo a:hover{color:var(--accent-3)}
+.availability{display:inline-flex;align-items:center;gap:8px;color:var(--success);font-family:"JetBrains Mono",monospace;font-size:13px}
+.availability::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 10px var(--success);animation:pulse 2s ease-in-out infinite}
+
+footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:12.5px;text-align:center;font-family:"JetBrains Mono",monospace;margin-top:60px}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media (max-width:880px){
+  .about-grid,.two,.form-grid{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:720px){
+  .wrap{padding:0 20px}
+  .tl::before{left:6px}
+  .tl li{grid-template-columns:1fr;padding-left:32px}
+  .tl li::before{left:0;top:28px}
+  .tl time{padding-top:0}
+  .proj{grid-template-columns:1fr}
+  nav{padding:14px 0;flex-wrap:wrap;gap:10px}
+  nav .links{gap:12px;font-size:12px}
+  .hero{padding:56px 0 36px}
+  .kpis{grid-template-columns:repeat(2,1fr);gap:12px}
+  .kpi{padding:16px 14px}
+  .kpi b{font-size:22px}
+  .kpi span{font-size:11.5px}
+  .blueprint{padding:22px 18px}
+  .proj .case-row{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Aller au contenu</a>
+<canvas id="bg-canvas"></canvas>
+<div class="vignette"></div>
+
 <div class="wrap">
-<nav>
-  <span class="badge">Disponible à partir de [À COMPLÉTER : date] · [À COMPLÉTER : CDI / freelance / remote]</span>
-  <div class="links">
-    <a href="#apropos">À propos</a>
-    <a href="#offres">Offres</a>
-    <a href="#projets">Projets</a>
-    <a href="#parcours">Parcours</a>
-    <a href="#contact">Contact</a>
-    <a href="en/">EN</a>
-  </div>
-</nav>
-<main id="main">
-<header class="hero">
-  <span class="badge">◆ Consultant ERP + IA · Environnements réglementés</span>
-  <h1>Je connecte les ERP d'entreprise à la data et à l'IA — en environnement réglementé.</h1>
-  <p class="lead">Consultant ERP (Odoo, Sage X3) et doctorant en IA (NLP/LLM). J'aide les PME et ETI (pharma, automobile) à migrer, sécuriser et automatiser leurs systèmes métiers, puis à y intégrer des modèles IA conformes.</p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="#contact" data-event="cta-recruteur">Recruteur ? Télécharger mon CV (PDF)</a>
-    <a class="btn btn-secondary" href="https://calendly.com/othman-elkhazraje" target="_blank" rel="noopener" data-event="cta-calendly">Projet ? Réserver 15 min</a>
-  </div>
-  <p style="margin-top:18px;color:var(--muted);font-size:14px">Casablanca, Maroc · Français · Arabe · Anglais · 4+ ans en IT, ERP & data · Doctorant IA (NLP/LLM)</p>
-  <div class="kpis">
-    <div class="kpi"><b>100+</b><span>utilisateurs migrés (Sage X3)</span><div class="mesure">Indicatif, données client confidentielles. [À COMPLÉTER : périmètre, période, méthode]</div></div>
-    <div class="kpi"><b>0 €</b><span>dépassement budget — migrations</span><div class="mesure">Indicatif, données client confidentielles.</div></div>
-    <div class="kpi"><b>−30 %</b><span>incidents sécurité (12 mois)</span><div class="mesure">Indicatif, données client confidentielles.</div></div>
-    <div class="kpi"><b>99,9 %</b><span>disponibilité infra critique</span><div class="mesure">Indicatif, données client confidentielles.</div></div>
-    <div class="kpi"><b>−60 %</b><span>temps de rédaction (NLG pharma)</span><div class="mesure">Indicatif, données client confidentielles.</div></div>
-  </div>
-</header>
-<section id="apropos">
-  <h2>À propos</h2>
-  <div class="about">
-    <p>Je suis consultant ERP et doctorant en IA. Je prends en charge des projets où l'ERP (Odoo ou Sage X3) doit rester conforme (pharma BPF/GMP, automobile) tout en gagnant en automatisation et en intelligence. Mon rôle : cadrer, migrer, sécuriser, puis greffer des pipelines IA (NLG, détection d'anomalies) quand cela crée une valeur mesurable. Doctorat mené en parallèle de l'activité professionnelle [À COMPLÉTER : temps partiel / cotutelle / autre].</p>
-  </div>
-</section>
-<section id="offres">
-  <h2>Offres</h2>
-  <p class="section-sub">Quatre interventions orientées résultats pour environnements réglementés.</p>
-  <div class="offres">
-    <article class="offre">
-      <h3>Diagnostic ERP / IA en 5 jours</h3>
-      <p>Client idéal : PME/ETI pharma ou auto qui hésite entre migration et modernisation.</p>
-      <p>Durée type : 5 jours.</p>
-      <ul><li>Audit fonctionnel et technique</li><li>Cartographie des risques réglementaires</li><li>Recommandations priorisées</li><li>Estimation budget/délai</li></ul>
-      <p>À partir de [À COMPLÉTER : prix MAD/EUR]</p>
-      <a class="btn btn-primary" href="#contact">Demander un diagnostic</a>
-    </article>
-    <article class="offre">
-      <h3>Migration ERP sécurisée</h3>
-      <p>Client idéal : organisation 50-200 utilisateurs passant à Sage X3 ou Odoo.</p>
-      <p>Durée type : 4-8 mois.</p>
-      <ul><li>Cadrage et spécifications</li><li>Migration données + paramétrage</li><li>Formation et documentation</li><li>Accompagnement go-live</li></ul>
-      <p>À partir de [À COMPLÉTER : prix MAD/EUR]</p>
-      <a class="btn btn-primary" href="#contact">Demander un devis</a>
-    </article>
-    <article class="offre">
-      <h3>Infra critique + PRA</h3>
-      <p>Client idéal : site pharma ou multi-sites avec exigence de continuité.</p>
-      <p>Durée type : 2-4 mois.</p>
-      <ul><li>Audit infra et réseau</li><li>Mise en place supervision</li><li>PRA/PCA testés</li><li>Politiques RGPD/ISO</li></ul>
-      <p>À partir de [À COMPLÉTER : prix MAD/EUR]</p>
-      <a class="btn btn-primary" href="#contact">Demander un devis</a>
-    </article>
-    <article class="offre">
-      <h3>Pipeline IA / NLG métier</h3>
-      <p>Client idéal : organisation avec documents réglementaires ou logs à analyser.</p>
-      <p>Durée type : 6-12 semaines.</p>
-      <ul><li>Collecte et normalisation</li><li>Modèle NLG ou détection</li><li>Intégration ERP</li><li>Déploiement et monitoring</li></ul>
-      <p>À partir de [À COMPLÉTER : prix MAD/EUR]</p>
-      <a class="btn btn-primary" href="#contact">Demander un devis</a>
-    </article>
-  </div>
-</section>
-<section id="projets">
-  <h2>Projets</h2>
-  <p class="section-sub">Trois case studies détaillés et trois réalisations complémentaires.</p>
-  <div class="proj-grid">
-    <article class="proj-card">
-      <h3>Migration ERP DEKRA — 100+ utilisateurs</h3>
-      <p>Sage X3, 6 mois, 5 équipes, 0 dépassement. <a href="projets/migration-erp-dekra.html">Lire le case study</a></p>
-    </article>
-    <article class="proj-card">
-      <h3>Plateforme NLG pharma</h3>
-      <p>Génération de documents réglementaires, −60 % temps de rédaction. <a href="projets/nlg-pharma.html">Lire le case study</a></p>
-    </article>
-    <article class="proj-card">
-      <h3>IDS hybride NLP + GAN</h3>
-      <p>Détection d'intrusion temps réel chez Multilist. <a href="projets/ids-nlp-gan.html">Lire le case study</a></p>
-    </article>
-    <article class="proj-card"><h3>CRM custom + API</h3><p>Suivi CA temps réel intégré ERP / banque / Power BI.</p></article>
-    <article class="proj-card"><h3>Infra & conformité</h3><p>Supervision, PRA/PCA, politiques RGPD/ISO 27001, infra pharma 50+ users.</p></article>
-    <article class="proj-card"><h3>Pipeline IA / MLOps</h3><p>Collecte → entraînement → déploiement conteneurisé → monitoring.</p></article>
-  </div>
-</section>
-<section id="parcours">
-  <h2>Parcours</h2>
-  <ol class="tl">
-    <li><time>2020</time> — Data Scientist & Architecte Cloud, AGENZ</li>
-    <li><time>2022</time> — Machine Learning Engineer & Sécurité Applicative, Multilist</li>
-    <li><time>2023–</time> — Doctorat IA (NLP/LLM), École des Sciences de l'Information, Rabat (en parallèle de l'activité pro [À COMPLÉTER])</li>
-    <li><time>2024</time> — Administrateur ERP & Sécurité des SI, DEKRA Automotive Maroc</li>
-    <li><time>2025</time> — Administrateur Systèmes, Réseau & Sécurité — Business Analyst, Kosmopharma / Steripharma</li>
-  </ol>
-  <h3 style="margin-top:28px">Formation</h3>
-  <ul>
-    <li>Doctorat — Intelligence Artificielle (NLP/LLM), ESI Rabat · depuis 2023</li>
-    <li>Master spécialisé — Traitement intelligent des systèmes, Université Mohammed V · 2017–2022</li>
-    <li>Licence professionnelle — SI & Big Data, EST Salé · 2019–2020</li>
-  </ul>
-  <h3>Formations complémentaires</h3>
-  <ul>
-    <li>AWS Data Scientist — Udemy · 2022</li>
-  </ul>
-  <h3>Certifications</h3>
-  <ul>
-    <li>Azure Solutions Architect Expert — Microsoft · Octobre 2024</li>
-    <li>Local Information Security — DEKRA France · 2025</li>
-    <li>CompTIA Security+ / Microsoft SC-900 — En préparation · 2026</li>
-  </ul>
-</section>
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Demandez un devis ou prenez rendez-vous. Réponse sous 48 h.</p>
-  <p>Email : o.elkhazraje@gmail.com · <a href="https://www.linkedin.com/in/othman-elkhazraje">LinkedIn</a> · <a href="https://github.com/ituthmanenginerrr">GitHub</a></p>
-  <form action="[À COMPLÉTER : endpoint Formspree ou Web3Forms]" method="POST">
-    <input type="text" name="name" placeholder="Nom" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="text" name="_honeypot" style="display:none">
-    <textarea name="message" placeholder="Message" required></textarea>
-    <button class="btn btn-primary" type="submit">Envoyer</button>
-  </form>
-  <p style="font-size:12px;color:var(--muted);margin-top:16px">Aucun cookie publicitaire. Mesure d'audience anonyme sans cookies.</p>
-</section>
-</main>
-<footer>Othman ELKHAZRAJE · Consultant ERP + IA · Casablanca</footer>
+  <nav>
+    <span class="status"><i></i><span data-fr="Demander un devis / Rendez-vous" data-en="Request a quote / Book a call">Demander un devis / Rendez-vous</span></span>
+    <div class="links">
+      <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+      <a href="#expertise" data-fr="Expertise" data-en="Expertise">Expertise</a>
+      <a href="#blueprints" data-fr="Méthodologie" data-en="Methodology">Méthodologie</a>
+      <a href="#parcours" data-fr="Parcours" data-en="Journey">Parcours</a>
+      <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
+      <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
+      <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" id="lang-fr" aria-pressed="true">FR</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <span class="eyebrow" data-fr="◆ Consultant ERP + IA · Environnements réglementés" data-en="◆ ERP + AI Consultant · Regulated environments">◆ Consultant ERP + IA · Environnements réglementés</span>
+    <h1 data-fr="Je connecte les ERP d'entreprise à la data et à l'IA — en environnement réglementé." data-en="I connect enterprise ERPs to data and AI — in regulated environments.">Je connecte les ERP d'entreprise à la data et à l'IA — en environnement réglementé.</h1>
+    <p class="lead" data-fr="Consultant ERP (Odoo, Sage X3), Administrateur Systèmes & Réseau, et Doctorant en IA (NLP / LLM). J'accompagne les PME et ETI (pharma, automobile) dans la migration, la sécurisation et l'automatisation de leurs systèmes métiers — puis j'y greffe des modèles IA quand c'est pertinent et conforme." data-en="ERP Consultant (Odoo, Sage X3), Systems & Network Administrator, and PhD Researcher in AI (NLP / LLM). I help SMBs and mid-caps (pharma, automotive) migrate, secure and automate their business systems — then graft on AI models when relevant and compliant.">Consultant ERP (Odoo, Sage X3), Administrateur Systèmes & Réseau, et Doctorant en IA (NLP / LLM). J'accompagne les PME et ETI (pharma, automobile) dans la migration, la sécurisation et l'automatisation de leurs systèmes métiers — puis j'y greffe des modèles IA quand c'est pertinent et conforme.</p>
+
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary" data-fr="→ Demander un devis" data-en="→ Request a quote">→ Demander un devis</a>
+      <a href="https://calendly.com/othman-elkhazraje" target="_blank" rel="noopener" class="btn-secondary" data-fr="📅 Prendre un RDV 15 min" data-en="📅 Book a 15-min call">📅 Prendre un RDV 15 min</a>
+    </div>
+
+    <p class="who">
+      <span><b data-fr="Casablanca, Maroc" data-en="Casablanca, Morocco">Casablanca, Maroc</b></span>
+      <span data-fr="Français · Arabe · Anglais" data-en="French · Arabic · English">Français · Arabe · Anglais</span>
+      <span data-fr="4+ ans ERP & IT Ops" data-en="4+ years ERP & IT Ops">4+ ans ERP & IT Ops</span>
+      <span data-fr="Doctorant IA (NLP/LLM)" data-en="PhD in AI (NLP/LLM)">Doctorant IA (NLP/LLM)</span>
+    </p>
+
+    <div class="kpis">
+      <div class="kpi reveal"><b>100+</b><span data-fr="utilisateurs migrés (Sage X3)" data-en="users migrated (Sage X3)">utilisateurs migrés (Sage X3)</span></div>
+      <div class="kpi reveal"><b>0 €</b><span data-fr="dépassement budget — migrations" data-en="budget overrun — migrations">dépassement budget — migrations</span></div>
+      <div class="kpi reveal"><b>−30 %</b><span data-fr="incidents sécurité (12 mois)" data-en="security incidents (12 months)">incidents sécurité (12 mois)</span></div>
+      <div class="kpi reveal"><b>99,9 %</b><span data-fr="disponibilité infra critique" data-en="critical infra availability">disponibilité infra critique</span></div>
+      <div class="kpi reveal"><b>−60 %</b><span data-fr="temps de rédaction (NLG pharma)" data-en="writing time (pharma NLG)">temps de rédaction (NLG pharma)</span></div>
+    </div>
+
+    <ol class="chain" aria-label="Skill chain">
+      <li><button type="button" data-k="erp" aria-pressed="true">ERP</button></li>
+      <li><button type="button" data-k="infra" aria-pressed="false" data-fr="Infrastructure" data-en="Infrastructure">Infrastructure</button></li>
+      <li><button type="button" data-k="dev" aria-pressed="false" data-fr="Développement" data-en="Development">Développement</button></li>
+      <li><button type="button" data-k="scrap" aria-pressed="false" data-fr="Scraping" data-en="Scraping">Scraping</button></li>
+      <li><button type="button" data-k="web" aria-pressed="false" data-fr="Déploiement Web" data-en="Web Deploy">Déploiement Web</button></li>
+      <li><button type="button" data-k="sec" aria-pressed="false" data-fr="Sécurité" data-en="Security">Sécurité</button></li>
+      <li><button type="button" data-k="ops" aria-pressed="false">DevOps</button></li>
+      <li><button type="button" data-k="data" aria-pressed="false" data-fr="Data & BI" data-en="Data & BI">Data & BI</button></li>
+      <li><button type="button" data-k="ia" aria-pressed="false" data-fr="IA / NLP" data-en="AI / NLP">IA / NLP</button></li>
+      <li><button type="button" data-k="pipe" aria-pressed="false" data-fr="Pipelines IA" data-en="AI Pipelines">Pipelines IA</button></li>
+    </ol>
+    <div class="detail" id="detail" aria-live="polite"></div>
+    <p class="hint" data-fr="// Cliquez sur une étape pour voir ce que j'y ai réalisé" data-en="// Click a step to see what I've delivered">// Cliquez sur une étape pour voir ce que j'y ai réalisé</p>
+  </header>
+
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <h2 data-fr="À propos" data-en="About">À propos</h2>
+    <p class="section-sub" data-fr="Un profil hybride ERP + Infrastructure + Data + IA, orienté terrain et résultats mesurables." data-en="A hybrid ERP + Infrastructure + Data + AI profile, field-oriented with measurable results.">Un profil hybride ERP + Infrastructure + Data + IA, orienté terrain et résultats mesurables.</p>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-fr-html="Je suis <strong>consultant ERP et administrateur systèmes</strong> avec plus de 4 ans d'expérience sur <span class='hl'>Odoo</span> et <span class='hl'>Sage X3</span>, et je termine un <strong>doctorat en Intelligence Artificielle</strong> (NLP / LLM) à l'École des Sciences de l'Information de Rabat." data-en-html="I'm an <strong>ERP consultant and systems administrator</strong> with 4+ years of experience on <span class='hl'>Odoo</span> and <span class='hl'>Sage X3</span>, currently finishing a <strong>PhD in Artificial Intelligence</strong> (NLP / LLM) at the School of Information Sciences in Rabat.">Je suis <strong>consultant ERP et administrateur systèmes</strong> avec plus de 4 ans d'expérience sur <span class="hl">Odoo</span> et <span class="hl">Sage X3</span>, et je termine un <strong>doctorat en Intelligence Artificielle</strong> (NLP / LLM) à l'École des Sciences de l'Information de Rabat.</p>
+        <p data-fr-html="Mon parcours est volontairement transverse : j'ai administré des <strong>infrastructures Windows Server / Linux / VMware</strong> pour 50+ utilisateurs, supervisé des réseaux LAN/WAN, <strong>développé des applications web et des modules métiers</strong>, conçu des <strong>pipelines de scraping et de normalisation de données</strong>, et industrialisé des déploiements <span class='hl'>CI/CD Docker / Kubernetes</span>." data-en-html="My path is deliberately cross-functional: I've administered <strong>Windows Server / Linux / VMware infrastructures</strong> for 50+ users, monitored LAN/WAN networks, <strong>built web applications and business modules</strong>, designed <strong>data scraping and normalization pipelines</strong>, and industrialized <span class='hl'>CI/CD Docker / Kubernetes</span> deployments.">Mon parcours est volontairement transverse : j'ai administré des <strong>infrastructures Windows Server / Linux / VMware</strong> pour 50+ utilisateurs, supervisé des réseaux LAN/WAN, <strong>développé des applications web et des modules métiers</strong>, conçu des <strong>pipelines de scraping et de normalisation de données</strong>, et industrialisé des déploiements <span class="hl">CI/CD Docker / Kubernetes</span>.</p>
+        <p data-fr-html="Ce qui me distingue : je ne me contente pas d'administrer — je <strong>conçois, développe, mesure, automatise et sécurise</strong>. De la conception d'une plateforme IA jusqu'au déploiement en production : pipelines NLG, CRM connectés à des API, dashboards temps réel, politiques RGPD / ISO 27001, PRA/PCA testés (RTO &lt; 4 h)." data-en-html="What sets me apart: I don't just administer — I <strong>design, develop, measure, automate and secure</strong>. From AI platform design to production deployment: NLG pipelines, CRMs connected to APIs, real-time dashboards, GDPR / ISO 27001 policies, tested DRP/BCP (RTO &lt; 4h).">Ce qui me distingue : je ne me contente pas d'administrer — je <strong>conçois, développe, mesure, automatise et sécurise</strong>. De la conception d'une plateforme IA jusqu'au déploiement en production : pipelines NLG, CRM connectés à des API, dashboards temps réel, politiques RGPD / ISO 27001, PRA/PCA testés (RTO &lt; 4 h).</p>
+
+        <div class="objectif">
+          <b data-fr="◆ Ce que je recherche" data-en="◆ What I'm looking for">◆ Ce que je recherche</b>
+          <p data-fr="Accompagnement de projets ERP (Odoo / Sage X3) + IA appliquée pour environnements réglementés (pharma, automobile). Administration systèmes & réseau, DevOps, data engineering. Basé à Casablanca, ouvert au télétravail et aux déplacements." data-en="Support for ERP (Odoo / Sage X3) + applied AI projects in regulated environments (pharma, automotive). Systems & network administration, DevOps, data engineering. Based in Casablanca, open to remote work and travel.">Accompagnement de projets ERP (Odoo / Sage X3) + IA appliquée pour environnements réglementés (pharma, automobile). Administration systèmes & réseau, DevOps, data engineering. Basé à Casablanca, ouvert au télétravail et aux déplacements.</p>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <div class="acard reveal"><b>◈ <span data-fr="Conception → Déploiement" data-en="Design → Deployment">Conception → Déploiement</span></b><span data-fr="Je prends en charge le cycle complet : cadrage, architecture, développement, tests, mise en production, monitoring." data-en="I own the full cycle: scoping, architecture, development, testing, production deployment, monitoring.">Je prends en charge le cycle complet : cadrage, architecture, développement, tests, mise en production, monitoring.</span></div>
+        <div class="acard reveal"><b>◈ <span data-fr="Double compétence" data-en="Dual expertise">Double compétence</span></b><span data-fr="ERP métier + Infrastructure + Dev + Data + IA. Peu de profils savent paramétrer un Sage X3, déployer un pipeline IA et sécuriser l'ensemble." data-en="Business ERP + Infrastructure + Dev + Data + AI. Few profiles can configure Sage X3, deploy an AI pipeline, and secure the whole stack.">ERP métier + Infrastructure + Dev + Data + IA. Peu de profils savent paramétrer un Sage X3, déployer un pipeline IA et sécuriser l'ensemble.</span></div>
+        <div class="acard reveal"><b>◈ <span data-fr="Orienté résultats" data-en="Results-driven">Orienté résultats</span></b><span data-fr="Chaque mission est pilotée par des indicateurs : disponibilité, RTO, incidents, temps de déploiement, CA, qualité des données." data-en="Every mission is driven by metrics: availability, RTO, incidents, deployment time, revenue, data quality.">Chaque mission est pilotée par des indicateurs : disponibilité, RTO, incidents, temps de déploiement, CA, qualité des données.</span></div>
+        <div class="acard reveal"><b>◈ <span data-fr="Trilingue & terrain" data-en="Trilingual & hands-on">Trilingue & terrain</span></b><span data-fr="Français C1+, arabe natif, anglais B2+. Habitué aux environnements réglementés (pharma, automobile)." data-en="French C1+, native Arabic, English B2+. Used to regulated environments (pharma, automotive).">Français C1+, arabe natif, anglais B2+. Habitué aux environnements réglementés (pharma, automobile).</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise">
+    <h2 data-fr="Trois pôles d'expertise" data-en="Three areas of expertise">Trois pôles d'expertise</h2>
+    <p class="section-sub" data-fr="Je positionne mon expertise autour de trois axes complémentaires — c'est ce que je vends concrètement aux clients et employeurs." data-en="I position my expertise around three complementary axes — this is what I concretely deliver to clients and employers.">Je positionne mon expertise autour de trois axes complémentaires — c'est ce que je vends concrètement aux clients et employeurs.</p>
+
+    <div class="roles">
+      <div class="role reveal">
+        <span class="lvl">Pôle 1 · ERP & Business Analysis</span>
+        <h3 data-fr="Consultant ERP & Business Analyst" data-en="ERP Consultant & Business Analyst">Consultant ERP & Business Analyst</h3>
+        <p data-fr="Analyse des besoins métiers, spécifications fonctionnelles, BPMN. Déploiement, paramétrage et personnalisation Odoo / Sage X3. Développement de modules Python/XML, migration de données, formation utilisateurs, documentation." data-en="Business requirements analysis, functional specifications, BPMN. Deployment, configuration and customization of Odoo / Sage X3. Python/XML module development, data migration, user training, documentation.">Analyse des besoins métiers, spécifications fonctionnelles, BPMN. Déploiement, paramétrage et personnalisation Odoo / Sage X3. Développement de modules Python/XML, migration de données, formation utilisateurs, documentation.</p>
+        <div class="tags"><em>Odoo</em><em>Sage X3</em><em>Python/XML</em><em>BPMN</em><em>JIRA</em></div>
+      </div>
+
+      <div class="role reveal">
+        <span class="lvl">Pôle 2 · Infra, Cloud & DevOps</span>
+        <h3 data-fr="Administrateur Systèmes, Réseau & Cloud" data-en="Systems, Network & Cloud Administrator">Administrateur Systèmes, Réseau & Cloud</h3>
+        <p data-fr="Windows Server, Linux, Active Directory, GPO, VMware / Hyper-V. Réseau Cisco / FortiGate / pfSense, VPN. Supervision Zabbix / Nagios / ELK. CI/CD Docker, Kubernetes. PRA/PCA testés (RTO < 4 h)." data-en="Windows Server, Linux, Active Directory, GPO, VMware / Hyper-V. Cisco / FortiGate / pfSense network, VPN. Zabbix / Nagios / ELK monitoring. Docker CI/CD, Kubernetes. Tested DRP/BCP (RTO < 4h).">Windows Server, Linux, Active Directory, GPO, VMware / Hyper-V. Réseau Cisco / FortiGate / pfSense, VPN. Supervision Zabbix / Nagios / ELK. CI/CD Docker, Kubernetes. PRA/PCA testés (RTO &lt; 4 h).</p>
+        <div class="tags"><em>Windows Server</em><em>Linux</em><em>AD</em><em>VMware</em><em>Docker</em></div>
+      </div>
+
+      <div class="role reveal">
+        <span class="lvl">Pôle 3 · Data & IA</span>
+        <h3 data-fr="Data Scientist & ML Engineer" data-en="Data Scientist & ML Engineer">Data Scientist & ML Engineer</h3>
+        <p data-fr="Pipelines de scraping et normalisation (Scrapy, Pandas). Modèles XGBoost, NLP, NLG, GAN. Pipelines IA de bout en bout (collecte → normalisation → entraînement → déploiement → monitoring). Dashboards Power BI. Recherche NLP/LLM appliquée." data-en="Scraping and normalization pipelines (Scrapy, Pandas). XGBoost, NLP, NLG, GAN models. End-to-end AI pipelines (collection → normalization → training → deployment → monitoring). Power BI dashboards. Applied NLP/LLM research.">Pipelines de scraping et normalisation (Scrapy, Pandas). Modèles XGBoost, NLP, NLG, GAN. Pipelines IA de bout en bout (collecte → normalisation → entraînement → déploiement → monitoring). Dashboards Power BI. Recherche NLP/LLM appliquée.</p>
+        <div class="tags"><em>NLP</em><em>NLG</em><em>LLM</em><em>XGBoost</em><em>MLflow</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES PACKAGÉES -->
+  <section id="offres">
+    <h2 data-fr="Offres d'intervention" data-en="Service packages">Offres d'intervention</h2>
+    <p class="section-sub" data-fr="Trois offres claires, orientées résultats, pour environnements réglementés." data-en="Three clear, results-oriented packages for regulated environments.">Trois offres claires, orientées résultats, pour environnements réglementés.</p>
+    <div class="roles">
+      <div class="role reveal">
+        <span class="lvl">Offre 1</span>
+        <h3 data-fr="Migration ERP sécurisée" data-en="Secure ERP Migration">Migration ERP sécurisée</h3>
+        <p data-fr="Migration Sage X3 ou Odoo de bout en bout : cadrage, paramétrage, migration de données, formation, documentation. 0 dépassement budget/délai. Conforme RGPD / ISO." data-en="End-to-end Sage X3 or Odoo migration: scoping, configuration, data migration, training, documentation. Zero budget/schedule overrun. GDPR / ISO compliant.">Migration Sage X3 ou Odoo de bout en bout : cadrage, paramétrage, migration de données, formation, documentation. 0 dépassement budget/délai. Conforme RGPD / ISO.</p>
+        <div class="tags"><em>Sage X3</em><em>Odoo</em><em>Migration</em><em>Formation</em></div>
+      </div>
+      <div class="role reveal">
+        <span class="lvl">Offre 2</span>
+        <h3 data-fr="Infra critique + PRA" data-en="Critical Infra + DRP">Infra critique + PRA</h3>
+        <p data-fr="Administration Windows Server / Linux, AD, réseau FortiGate, supervision Zabbix. PRA/PCA testés (RTO < 4h). Disponibilité 99,9 % en environnement pharma." data-en="Windows Server / Linux, AD, FortiGate network administration, Zabbix monitoring. Tested DRP/BCP (RTO < 4h). 99.9% availability in pharma environments.">Administration Windows Server / Linux, AD, réseau FortiGate, supervision Zabbix. PRA/PCA testés (RTO < 4h). Disponibilité 99,9 % en environnement pharma.</p>
+        <div class="tags"><em>Windows Server</em><em>FortiGate</em><em>Zabbix</em><em>PRA</em></div>
+      </div>
+      <div class="role reveal">
+        <span class="lvl">Offre 3</span>
+        <h3 data-fr="Pipeline IA / NLG métier" data-en="Business AI / NLG Pipeline">Pipeline IA / NLG métier</h3>
+        <p data-fr="De la collecte à la production : NLG pour documents réglementaires, détection d'anomalies, dashboards BI. Intégré à l'ERP, conteneurisé, monitoré." data-en="From collection to production: NLG for regulatory documents, anomaly detection, BI dashboards. Integrated with ERP, containerized, monitored.">De la collecte à la production : NLG pour documents réglementaires, détection d'anomalies, dashboards BI. Intégré à l'ERP, conteneurisé, monitoré.</p>
+        <div class="tags"><em>NLG</em><em>NLP</em><em>MLflow</em><em>Docker</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTHODOLOGIE -->
+  <section id="blueprints">
+    <h2 data-fr="Méthodologie d'intervention" data-en="Intervention methodology">Méthodologie d'intervention</h2>
+    <p class="section-sub" data-fr="Ma démarche projet, de la conception au déploiement en production. Les schémas ci-dessous illustrent comment j'aborde concrètement chaque étape." data-en="My project approach, from design to production deployment. The diagrams below illustrate how I concretely address each step.">Ma démarche projet, de la conception au déploiement en production. Les schémas ci-dessous illustrent comment j'aborde concrètement chaque étape.</p>
+
+    <!-- Phases Conception → Dev → Déploiement -->
+    <div class="phases">
+      <div class="phase reveal">
+        <span class="num">PHASE 01</span>
+        <h4 data-fr="Conception" data-en="Design">Conception</h4>
+        <p data-fr="Cadrage, besoins, spécifications, architecture cible, choix techniques, plan projet." data-en="Scoping, requirements, specs, target architecture, tech choices, project plan.">Cadrage, besoins, spécifications, architecture cible, choix techniques, plan projet.</p>
+      </div>
+      <div class="phase reveal">
+        <span class="num">PHASE 02</span>
+        <h4 data-fr="Développement" data-en="Development">Développement</h4>
+        <p data-fr="Modules, intégrations API, pipelines data / IA, tests unitaires, documentation." data-en="Modules, API integrations, data / AI pipelines, unit tests, documentation.">Modules, intégrations API, pipelines data / IA, tests unitaires, documentation.</p>
+      </div>
+      <div class="phase reveal">
+        <span class="num">PHASE 03</span>
+        <h4 data-fr="Déploiement" data-en="Deployment">Déploiement</h4>
+        <p data-fr="CI/CD, conteneurisation, mise en production, monitoring, formation utilisateurs." data-en="CI/CD, containerization, production go-live, monitoring, user training.">CI/CD, conteneurisation, mise en production, monitoring, formation utilisateurs.</p>
+      </div>
+      <div class="phase reveal">
+        <span class="num">PHASE 04</span>
+        <h4 data-fr="Exploitation" data-en="Operations">Exploitation</h4>
+        <p data-fr="Supervision, support, optimisation continue, mesure des KPI, évolutions." data-en="Monitoring, support, continuous optimization, KPI measurement, evolutions.">Supervision, support, optimisation continue, mesure des KPI, évolutions.</p>
+      </div>
+    </div>
+
+    <div class="blueprints">
+      <!-- Blueprint 1 : IDS NLP + GAN -->
+      <div class="blueprint reveal">
+        <div class="blueprint-head">
+          <div>
+            <h3 data-fr="Détection d'intrusion — approche NLP + GAN" data-en="Intrusion Detection — NLP + GAN approach">Détection d'intrusion — approche NLP + GAN</h3>
+            <p data-fr="Démarche appliquée chez Multilist : ingestion des logs → vectorisation NLP → génération adversariale (GAN) pour détecter les patterns anormaux → classification → alerte SIEM." data-en="Approach applied at Multilist: log ingestion → NLP vectorization → adversarial generation (GAN) to detect abnormal patterns → classification → SIEM alert.">Démarche appliquée chez Multilist : ingestion des logs → vectorisation NLP → génération adversariale (GAN) pour détecter les patterns anormaux → classification → alerte SIEM.</p>
+          </div>
+          <span class="badge-mini" data-fr="Expérimenté en production" data-en="Tested in production">Expérimenté en production</span>
+        </div>
+        <svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Détection d'intrusion NLP GAN">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4DA3FF"/><stop offset="100%" stop-color="#7C5CFF"/>
+            </linearGradient>
+          </defs>
+          <g font-family="JetBrains Mono, monospace" font-size="12" fill="#E8EEF8" text-anchor="middle">
+            <rect x="20" y="100" width="140" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#4DA3FF" stroke-width="1.5"/>
+            <text x="90" y="127">📥 Logs / Trafic</text>
+            <text x="90" y="146" fill="#8DA0C0" font-size="10">Syslog · Netflow · API</text>
+
+            <rect x="200" y="100" width="140" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#22D3EE" stroke-width="1.5"/>
+            <text x="270" y="127">🧠 Encodeur NLP</text>
+            <text x="270" y="146" fill="#8DA0C0" font-size="10">Transformers · BERT</text>
+
+            <rect x="380" y="40" width="140" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#7C5CFF" stroke-width="1.5"/>
+            <text x="450" y="67">⚡ GAN Générateur</text>
+            <text x="450" y="86" fill="#8DA0C0" font-size="10">Patterns adversariaux</text>
+
+            <rect x="380" y="160" width="140" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#7C5CFF" stroke-width="1.5"/>
+            <text x="450" y="187">🛡️ Classifieur</text>
+            <text x="450" y="206" fill="#8DA0C0" font-size="10">XGBoost · MLP</text>
+
+            <rect x="560" y="100" width="140" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#F5B942" stroke-width="1.5"/>
+            <text x="630" y="127">🚨 Décision</text>
+            <text x="630" y="146" fill="#8DA0C0" font-size="10">Seuil · Scoring</text>
+
+            <rect x="740" y="100" width="140" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#34D399" stroke-width="1.5"/>
+            <text x="810" y="127">📡 Alerte SIEM</text>
+            <text x="810" y="146" fill="#8DA0C0" font-size="10">Dashboard · On-call</text>
+
+            <path d="M160 130 L200 130" stroke="url(#g1)" stroke-width="2"/>
+            <path d="M340 130 C360 130, 360 70, 380 70" stroke="url(#g1)" stroke-width="2" fill="none"/>
+            <path d="M340 130 C360 130, 360 190, 380 190" stroke="url(#g1)" stroke-width="2" fill="none"/>
+            <path d="M520 70 C540 70, 540 130, 560 130" stroke="url(#g1)" stroke-width="2" fill="none"/>
+            <path d="M520 190 C540 190, 540 130, 560 130" stroke="url(#g1)" stroke-width="2" fill="none"/>
+            <path d="M700 130 L740 130" stroke="url(#g1)" stroke-width="2"/>
+
+            <path d="M630 160 C630 220, 450 220, 450 220 C450 220, 270 220, 270 160" stroke="#8DA0C0" stroke-width="1.5" stroke-dasharray="5 5" fill="none" opacity=".7"/>
+            <text x="450" y="240" fill="#8DA0C0" font-size="10">↻ Boucle de réentraînement continu</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Blueprint 2 : Cloud ISO 27001 -->
+      <div class="blueprint reveal">
+        <div class="blueprint-head">
+          <div>
+            <h3 data-fr="Architecture cloud sécurisée — conformité RGPD / ISO 27001" data-en="Secure cloud architecture — GDPR / ISO 27001 compliance">Architecture cloud sécurisée — conformité RGPD / ISO 27001</h3>
+            <p data-fr="Démarche appliquée chez DEKRA et Steripharma : VPC isolé, IAM, chiffrement au repos et en transit, WAF, supervision continue, plan de reprise testé (RTO < 4 h)." data-en="Approach applied at DEKRA and Steripharma: isolated VPC, IAM, encryption at rest and in transit, WAF, continuous monitoring, tested DRP (RTO < 4h).">Démarche appliquée chez DEKRA et Steripharma : VPC isolé, IAM, chiffrement au repos et en transit, WAF, supervision continue, plan de reprise testé (RTO &lt; 4 h).</p>
+          </div>
+          <span class="badge-mini" data-fr="Conforme ISO 27001" data-en="ISO 27001 compliant">Conforme ISO 27001</span>
+        </div>
+        <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture cloud sécurisée">
+          <g font-family="JetBrains Mono, monospace" font-size="12" fill="#E8EEF8" text-anchor="middle">
+            <rect x="40" y="20" width="120" height="50" rx="8" fill="rgba(15,25,50,.7)" stroke="#F5B942" stroke-width="1.5"/>
+            <text x="100" y="50">🌐 Internet</text>
+
+            <rect x="200" y="20" width="140" height="50" rx="8" fill="rgba(15,25,50,.7)" stroke="#F87171" stroke-width="1.5"/>
+            <text x="270" y="50">🛡️ WAF / DDoS</text>
+
+            <rect x="40" y="100" width="820" height="220" rx="14" fill="rgba(77,163,255,.05)" stroke="#4DA3FF" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <text x="60" y="122" fill="#4DA3FF" font-size="11" text-anchor="start">VPC isolé — Chiffrement au repos & en transit</text>
+
+            <rect x="70" y="140" width="350" height="160" rx="10" fill="rgba(34,211,238,.05)" stroke="#22D3EE" stroke-width="1" stroke-dasharray="4 3"/>
+            <text x="85" y="160" fill="#22D3EE" font-size="10" text-anchor="start">Subnet public — DMZ</text>
+
+            <rect x="90" y="180" width="140" height="50" rx="8" fill="rgba(15,25,50,.7)" stroke="#22D3EE" stroke-width="1.2"/>
+            <text x="160" y="210">⚙️ Load Balancer</text>
+
+            <rect x="260" y="180" width="140" height="50" rx="8" fill="rgba(15,25,50,.7)" stroke="#22D3EE" stroke-width="1.2"/>
+            <text x="330" y="210">🐳 API Gateway</text>
+
+            <rect x="90" y="245" width="310" height="40" rx="8" fill="rgba(15,25,50,.7)" stroke="#22D3EE" stroke-width="1.2"/>
+            <text x="245" y="270">🔐 IAM · MFA · OAuth2</text>
+
+            <rect x="450" y="140" width="380" height="160" rx="10" fill="rgba(124,92,255,.06)" stroke="#7C5CFF" stroke-width="1" stroke-dasharray="4 3"/>
+            <text x="465" y="160" fill="#7C5CFF" font-size="10" text-anchor="start">Subnet privé — Données sensibles</text>
+
+            <rect x="470" y="180" width="160" height="50" rx="8" fill="rgba(15,25,50,.7)" stroke="#7C5CFF" stroke-width="1.2"/>
+            <text x="550" y="210">🗄️ Base chiffrée</text>
+
+            <rect x="650" y="180" width="160" height="50" rx="8" fill="rgba(15,25,50,.7)" stroke="#7C5CFF" stroke-width="1.2"/>
+            <text x="730" y="210">🤖 Modèles IA</text>
+
+            <rect x="470" y="245" width="340" height="40" rx="8" fill="rgba(15,25,50,.7)" stroke="#7C5CFF" stroke-width="1.2"/>
+            <text x="640" y="270">📊 Monitoring · CloudTrail · Azure Monitor</text>
+
+            <path d="M160 45 L200 45" stroke="#4DA3FF" stroke-width="2"/>
+            <path d="M340 45 C450 45, 450 120, 160 120" stroke="#4DA3FF" stroke-width="2" fill="none" opacity=".6"/>
+            <path d="M230 205 L260 205" stroke="#22D3EE" stroke-width="2"/>
+            <path d="M400 205 C420 205, 420 205, 470 205" stroke="#7C5CFF" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+            <path d="M630 205 C640 205, 640 205, 650 205" stroke="#7C5CFF" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Blueprint 3 : Pipeline IA bout en bout -->
+      <div class="blueprint reveal">
+        <div class="blueprint-head">
+          <div>
+            <h3 data-fr="Pipeline IA de bout en bout — scraping au déploiement" data-en="End-to-end AI pipeline — scraping to deployment">Pipeline IA de bout en bout — scraping au déploiement</h3>
+            <p data-fr="Démarche que j'applique sur les projets data : collecte automatisée → normalisation → feature engineering → entraînement → validation → déploiement conteneurisé → monitoring MLOps." data-en="Approach I apply on data projects: automated collection → normalization → feature engineering → training → validation → containerized deployment → MLOps monitoring.">Démarche que j'applique sur les projets data : collecte automatisée → normalisation → feature engineering → entraînement → validation → déploiement conteneurisé → monitoring MLOps.</p>
+          </div>
+          <span class="badge-mini" data-fr="MLOps · Reproductible" data-en="MLOps · Reproducible">MLOps · Reproductible</span>
+        </div>
+        <svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline IA de bout en bout">
+          <g font-family="JetBrains Mono, monospace" font-size="11.5" fill="#E8EEF8" text-anchor="middle">
+            <rect x="20" y="80" width="120" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#4DA3FF" stroke-width="1.5"/>
+            <text x="80" y="105">🕷️ Scraping</text>
+            <text x="80" y="123" fill="#8DA0C0" font-size="10">Scrapy · Selenium</text>
+
+            <rect x="170" y="80" width="120" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#22D3EE" stroke-width="1.5"/>
+            <text x="230" y="105">🧹 Normalisation</text>
+            <text x="230" y="123" fill="#8DA0C0" font-size="10">Pandas · Regex</text>
+
+            <rect x="320" y="80" width="120" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#22D3EE" stroke-width="1.5"/>
+            <text x="380" y="105">🔧 Feature Eng.</text>
+            <text x="380" y="123" fill="#8DA0C0" font-size="10">Feature Store</text>
+
+            <rect x="470" y="80" width="120" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#7C5CFF" stroke-width="1.5"/>
+            <text x="530" y="105">🧠 Entraînement</text>
+            <text x="530" y="123" fill="#8DA0C0" font-size="10">TF · PyTorch</text>
+
+            <rect x="620" y="80" width="120" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#7C5CFF" stroke-width="1.5"/>
+            <text x="680" y="105">✅ Validation</text>
+            <text x="680" y="123" fill="#8DA0C0" font-size="10">MLflow · DVC</text>
+
+            <rect x="770" y="80" width="110" height="60" rx="10" fill="rgba(15,25,50,.7)" stroke="#34D399" stroke-width="1.5"/>
+            <text x="825" y="105">🚀 Déploiement</text>
+            <text x="825" y="123" fill="#8DA0C0" font-size="10">K8s · Docker</text>
+
+            <path d="M140 110 L170 110" stroke="#4DA3FF" stroke-width="2"/>
+            <path d="M290 110 L320 110" stroke="#22D3EE" stroke-width="2"/>
+            <path d="M440 110 L470 110" stroke="#7C5CFF" stroke-width="2"/>
+            <path d="M590 110 L620 110" stroke="#7C5CFF" stroke-width="2"/>
+            <path d="M740 110 L770 110" stroke="#34D399" stroke-width="2"/>
+
+            <rect x="20" y="170" width="860" height="32" rx="8" fill="rgba(52,211,153,.08)" stroke="#34D399" stroke-width="1" stroke-dasharray="4 3"/>
+            <text x="450" y="190" fill="#34D399" font-size="11">📈 Monitoring continu — Data drift · Performance · Alerting · Réentraînement automatique</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section id="parcours">
+    <h2 data-fr="Parcours" data-en="Journey">Parcours</h2>
+    <p class="section-sub" data-fr="Une trajectoire qui relie infrastructure, ERP, développement, sécurité et intelligence artificielle." data-en="A path connecting infrastructure, ERP, development, security and artificial intelligence.">Une trajectoire qui relie infrastructure, ERP, développement, sécurité et intelligence artificielle.</p>
+    <ol class="tl">
+      <li class="reveal"><time>2020</time><div><h3 data-fr="Data Scientist & Architecte Cloud" data-en="Data Scientist & Cloud Architect">Data Scientist & Architecte Cloud</h3><div class="org">AGENZ — Casablanca</div><p data-fr="Pipelines Python / NLP à grande échelle, outils IA de génération de texte, visualisation Power BI / Plotly. Journalisation et monitoring cloud (CloudTrail, Azure Monitor). Architecture AWS / Azure conforme RGPD." data-en="Large-scale Python / NLP pipelines, AI text generation tools, Power BI / Plotly visualization. Cloud logging and monitoring (CloudTrail, Azure Monitor). GDPR-compliant AWS / Azure architecture.">Pipelines Python / NLP à grande échelle, outils IA de génération de texte, visualisation Power BI / Plotly. Journalisation et monitoring cloud (CloudTrail, Azure Monitor). Architecture AWS / Azure conforme RGPD.</p></div></li>
+      <li class="reveal"><time>2022</time><div><h3 data-fr="Machine Learning Engineer & Sécurité Applicative" data-en="Machine Learning Engineer & AppSec">Machine Learning Engineer & Sécurité Applicative</h3><div class="org">Multilist — Casablanca</div><p data-fr="Modèle XGBoost de prédiction des prix immobiliers. Système de détection NLP + GAN intégré à un pipeline de supervision temps réel. Sécurisation API (TLS, MFA / OAuth2). Industrialisation Kubernetes / Docker / MLflow : −40 % de temps de déploiement." data-en="XGBoost model for real estate price prediction. NLP + GAN detection system integrated into a real-time monitoring pipeline. API security (TLS, MFA / OAuth2). Kubernetes / Docker / MLflow industrialization: −40% deployment time.">Modèle XGBoost de prédiction des prix immobiliers. Système de détection NLP + GAN intégré à un pipeline de supervision temps réel. Sécurisation API (TLS, MFA / OAuth2). Industrialisation Kubernetes / Docker / MLflow : −40 % de temps de déploiement.</p></div></li>
+      <li class="reveal"><time>2023</time><div><h3 data-fr="Doctorat en Intelligence Artificielle (NLP / LLM)" data-en="PhD in Artificial Intelligence (NLP / LLM)">Doctorat en Intelligence Artificielle (NLP / LLM)</h3><div class="org" data-fr="École des Sciences de l'Information — Rabat" data-en="School of Information Sciences — Rabat">École des Sciences de l'Information — Rabat</div><p data-fr="Architectures NLP avancées (Transformers, LLM) appliquées à la détection d'anomalies temps réel dans des environnements cloud sécurisés (AWS / Azure)." data-en="Advanced NLP architectures (Transformers, LLM) applied to real-time anomaly detection in secured cloud environments (AWS / Azure).">Architectures NLP avancées (Transformers, LLM) appliquées à la détection d'anomalies temps réel dans des environnements cloud sécurisés (AWS / Azure).</p></div></li>
+      <li class="reveal"><time>2024</time><div><h3 data-fr="Administrateur ERP & Sécurité des SI" data-en="ERP Administrator & IS Security">Administrateur ERP & Sécurité des SI</h3><div class="org">DEKRA Automotive Maroc — Casablanca</div><p data-fr="Migration ERP de 100+ utilisateurs en 6 mois (5 équipes coordonnées, 0 dépassement budget/délai). Administration Windows Server / Linux, AD, RBAC, MFA. Supervision LAN/WAN, VPN. Automatisation PowerShell / Python / Bash : −25 % d'opérations manuelles. 15+ politiques RGPD / ISO 27001 : −30 % d'incidents." data-en="ERP migration for 100+ users in 6 months (5 teams coordinated, 0 budget/schedule overrun). Windows Server / Linux administration, AD, RBAC, MFA. LAN/WAN monitoring, VPN. PowerShell / Python / Bash automation: −25% manual operations. 15+ GDPR / ISO 27001 policies: −30% incidents.">Migration ERP de 100+ utilisateurs en 6 mois (5 équipes coordonnées, 0 dépassement budget/délai). Administration Windows Server / Linux, AD, RBAC, MFA. Supervision LAN/WAN, VPN. Automatisation PowerShell / Python / Bash : −25 % d'opérations manuelles. 15+ politiques RGPD / ISO 27001 : −30 % d'incidents.</p></div></li>
+      <li class="reveal"><time>2025</time><div><h3 data-fr="Administrateur Systèmes, Réseau & Sécurité — Business Analyst" data-en="Systems, Network & Security Administrator — Business Analyst">Administrateur Systèmes, Réseau & Sécurité — Business Analyst</h3><div class="org">Kosmopharma / Steripharma — Casablanca</div><p data-fr="Infrastructure IT complète pour 50+ utilisateurs (Windows Server 2022, AD, GPO, DNS, DHCP, Exchange). Réseau Cisco/HP, FortiGate / pfSense, disponibilité 99,9 %. EDR, patch management, SIEM. ERP + Power BI pour la traçabilité BPF/GMP. PRA/PCA testés (RTO < 4 h). CI/CD Docker sous Linux." data-en="Complete IT infrastructure for 50+ users (Windows Server 2022, AD, GPO, DNS, DHCP, Exchange). Cisco/HP network, FortiGate / pfSense, 99.9% availability. EDR, patch management, SIEM. ERP + Power BI for GMP/BPF traceability. Tested DRP/BCP (RTO < 4h). Docker CI/CD on Linux.">Infrastructure IT complète pour 50+ utilisateurs (Windows Server 2022, AD, GPO, DNS, DHCP, Exchange). Réseau Cisco/HP, FortiGate / pfSense, disponibilité 99,9 %. EDR, patch management, SIEM. ERP + Power BI pour la traçabilité BPF/GMP. PRA/PCA testés (RTO &lt; 4 h). CI/CD Docker sous Linux.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets">
+    <h2 data-fr="Projets & réalisations" data-en="Projects & achievements">Projets & réalisations</h2>
+    <p class="section-sub" data-fr="Sélection de projets représentatifs au format Problème → Solution → Impact, avec graphiques de résultats. Le code source est public uniquement quand il peut l'être." data-en="Selected representative projects in Problem → Solution → Impact format, with results charts. Source code is public only when it can be.">Sélection de projets représentatifs au format Problème → Solution → Impact, avec graphiques de résultats. Le code source est public uniquement quand il peut l'être.</p>
+
+    <div class="proj-filters" role="group" aria-label="Filter projects">
+      <button type="button" data-f="all" aria-pressed="true" data-fr="Tous" data-en="All">Tous</button>
+      <button type="button" data-f="erp" aria-pressed="false">ERP</button>
+      <button type="button" data-f="infra" aria-pressed="false" data-fr="Infra & Réseau" data-en="Infra & Network">Infra & Réseau</button>
+      <button type="button" data-f="dev" aria-pressed="false" data-fr="Développement" data-en="Development">Développement</button>
+      <button type="button" data-f="scrap" aria-pressed="false" data-fr="Scraping" data-en="Scraping">Scraping</button>
+      <button type="button" data-f="sec" aria-pressed="false" data-fr="Sécurité" data-en="Security">Sécurité</button>
+      <button type="button" data-f="data" aria-pressed="false" data-fr="Data & BI" data-en="Data & BI">Data & BI</button>
+      <button type="button" data-f="ia" aria-pressed="false" data-fr="IA / NLP" data-en="AI / NLP">IA / NLP</button>
+    </div>
+
+    <div class="proj" id="proj-grid">
+
+      <!-- ⭐ NOUVEAU 1 : Plateforme AI Intelligence Pharma (NLG) -->
+      <article class="reveal" data-cat="ia dev erp">
+        <h3 data-fr="Plateforme AI Intelligence Pharma — Génération de texte (NLG)" data-en="AI Intelligence Pharma Platform — Text Generation (NLG)">Plateforme AI Intelligence Pharma — Génération de texte (NLG)</h3>
+        <div class="tag" data-fr="IA · Santé · NLG" data-en="AI · Health · NLG">IA · Santé · NLG</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Rédaction manuelle chronophage de comptes-rendus, notices et rapports réglementaires pharmaceutiques (BPF/GMP), avec un risque d'erreur et d'incohérence important." data-en="Time-consuming manual writing of reports, notices and regulatory pharmaceutical documents (GMP/BPF), with significant risk of error and inconsistency.">Rédaction manuelle chronophage de comptes-rendus, notices et rapports réglementaires pharmaceutiques (BPF/GMP), avec un risque d'erreur et d'incohérence important.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Plateforme IA complète — de la conception au déploiement : algorithme NLG (Transformers + templates métier), base documentaire pharma, validation humaine, intégration ERP pour la traçabilité, déploiement Docker avec monitoring." data-en="Full AI platform — from design to deployment: NLG algorithm (Transformers + business templates), pharma document base, human validation, ERP integration for traceability, Docker deployment with monitoring.">Plateforme IA complète — de la conception au déploiement : algorithme NLG (Transformers + templates métier), base documentaire pharma, validation humaine, intégration ERP pour la traçabilité, déploiement Docker avec monitoring.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Temps de rédaction (min) — Avant / Après NLG" data-en="Writing time (min) — Before / After NLG">Temps de rédaction (min) — Avant / Après NLG</div>
+          <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart: writing time before vs after NLG">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <line x1="30" y1="110" x2="380" y2="110" stroke="#4DA3FF" stroke-width="1" opacity=".4"/>
+              <line x1="30" y1="80" x2="380" y2="80" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <line x1="30" y1="50" x2="380" y2="50" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <line x1="30" y1="20" x2="380" y2="20" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <text x="26" y="113" text-anchor="end">0</text>
+              <text x="26" y="83" text-anchor="end">30</text>
+              <text x="26" y="53" text-anchor="end">60</text>
+              <text x="26" y="23" text-anchor="end">90</text>
+
+              <!-- Bar 1: Before -->
+              <rect x="80" y="20" width="60" height="90" rx="4" fill="url(#barBefore)" opacity=".85"/>
+              <text x="110" y="16" text-anchor="middle" fill="#F87171" font-size="11">~75 min</text>
+              <text x="110" y="126" text-anchor="middle" fill="#8DA0C0">Avant</text>
+
+              <!-- Bar 2: After -->
+              <rect x="240" y="80" width="60" height="30" rx="4" fill="url(#barAfter)" opacity=".9"/>
+              <text x="270" y="76" text-anchor="middle" fill="#34D399" font-size="11">~28 min</text>
+              <text x="270" y="126" text-anchor="middle" fill="#8DA0C0">Après NLG</text>
+
+              <defs>
+                <linearGradient id="barBefore" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#7C1D1D"/>
+                </linearGradient>
+                <linearGradient id="barAfter" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#0F766E"/>
+                </linearGradient>
+              </defs>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>−60 % temps</span><span>+40 % cohérence</span><span>BPF/GMP</span></div>
+        <div class="stack">Python · Transformers · NLG · Docker · ERP</div>
+      </article>
+
+      <!-- ⭐ NOUVEAU 2 : Supervision Infra IT serveurs -->
+      <article class="reveal" data-cat="infra sec">
+        <h3 data-fr="Supervision Infra IT — monitoring serveurs temps réel" data-en="IT Infra Monitoring — real-time server monitoring">Supervision Infra IT — monitoring serveurs temps réel</h3>
+        <div class="tag" data-fr="Infra · Supervision" data-en="Infra · Monitoring">Infra · Supervision</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Absence de visibilité temps réel sur l'état des serveurs (CPU, RAM, disque, IO, services critiques) — incidents détectés trop tard, impact sur les SLA." data-en="No real-time visibility on server health (CPU, RAM, disk, IO, critical services) — incidents detected too late, impacting SLAs.">Absence de visibilité temps réel sur l'état des serveurs (CPU, RAM, disque, IO, services critiques) — incidents détectés trop tard, impact sur les SLA.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Déploiement d'une stack de supervision : agents Zabbix / Prometheus / Grafana, dashboards par serveur, alerting mail / Slack, corrélation d'événements et rapports SLA automatisés." data-en="Monitoring stack deployment: Zabbix / Prometheus / Grafana agents, per-server dashboards, mail / Slack alerting, event correlation and automated SLA reports.">Déploiement d'une stack de supervision : agents Zabbix / Prometheus / Grafana, dashboards par serveur, alerting mail / Slack, corrélation d'événements et rapports SLA automatisés.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Disponibilité serveurs — 12 derniers mois (%)" data-en="Server availability — last 12 months (%)">Disponibilité serveurs — 12 derniers mois (%)</div>
+          <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart: server uptime">
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#8DA0C0">
+              <line x1="30" y1="110" x2="380" y2="110" stroke="#4DA3FF" stroke-width="1" opacity=".4"/>
+              <line x1="30" y1="80" x2="380" y2="80" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <line x1="30" y1="50" x2="380" y2="50" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <line x1="30" y1="20" x2="380" y2="20" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <text x="26" y="113" text-anchor="end">97</text>
+              <text x="26" y="83" text-anchor="end">98.5</text>
+              <text x="26" y="53" text-anchor="end">99</text>
+              <text x="26" y="23" text-anchor="end">99.9</text>
+
+              <polyline fill="none" stroke="url(#lineGrad)" stroke-width="2.5"
+                points="45,65 75,55 105,45 135,40 165,35 195,30 225,28 255,25 285,22 315,20 345,22 375,19"/>
+              <polyline fill="url(#areaGrad)" stroke="none" opacity=".35"
+                points="45,65 75,55 105,45 135,40 165,35 195,30 225,28 255,25 285,22 315,20 345,22 375,19 375,110 45,110"/>
+
+              <circle cx="375" cy="19" r="3.5" fill="#34D399"/>
+              <text x="375" y="14" text-anchor="end" fill="#34D399" font-size="10">99.9%</text>
+
+              <text x="45" y="126" text-anchor="middle">Jan</text>
+              <text x="135" y="126" text-anchor="middle">Avr</text>
+              <text x="225" y="126" text-anchor="middle">Jul</text>
+              <text x="315" y="126" text-anchor="middle">Oct</text>
+
+              <defs>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#4DA3FF"/><stop offset="100%" stop-color="#22D3EE"/>
+                </linearGradient>
+                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#22D3EE" stop-opacity=".6"/>
+                  <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>99,9 % uptime</span><span>Alerting temps réel</span><span>−40 % MTTR</span></div>
+        <div class="stack">Zabbix · Prometheus · Grafana · Linux · Windows Server</div>
+      </article>
+
+      <!-- ⭐ NOUVEAU 3 : Suivi CA + CRM + API -->
+      <article class="reveal" data-cat="dev data erp">
+        <h3 data-fr="Suivi du chiffre d'affaires — CRM custom + API" data-en="Revenue tracking — custom CRM + API">Suivi du chiffre d'affaires — CRM custom + API</h3>
+        <div class="tag" data-fr="CRM · API · BI" data-en="CRM · API · BI">CRM · API · BI</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Chiffre d'affaires suivi dans Excel, données dispersées entre ERP, banque et emails, aucune vision temps réel ni pilotage commercial fiable." data-en="Revenue tracked in Excel, data scattered across ERP, bank and emails, no real-time vision or reliable sales management.">Chiffre d'affaires suivi dans Excel, données dispersées entre ERP, banque et emails, aucune vision temps réel ni pilotage commercial fiable.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Développement d'un CRM custom (Python / FastAPI) intégré par API à l'ERP (Odoo / Sage X3), à la banque (relevés), à l'emailing et à Power BI. Dashboard CA temps réel avec objectifs, pipeline commercial et alertes automatiques." data-en="Custom CRM development (Python / FastAPI) integrated via API to ERP (Odoo / Sage X3), bank (statements), emailing and Power BI. Real-time revenue dashboard with targets, sales pipeline and automatic alerts.">Développement d'un CRM custom (Python / FastAPI) intégré par API à l'ERP (Odoo / Sage X3), à la banque (relevés), à l'emailing et à Power BI. Dashboard CA temps réel avec objectifs, pipeline commercial et alertes automatiques.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Évolution du CA mensuel après déploiement CRM" data-en="Monthly revenue growth after CRM deployment">Évolution du CA mensuel après déploiement CRM</div>
+          <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart: revenue growth">
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#8DA0C0">
+              <line x1="30" y1="110" x2="380" y2="110" stroke="#4DA3FF" stroke-width="1" opacity=".4"/>
+              <line x1="30" y1="80" x2="380" y2="80" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <line x1="30" y1="50" x2="380" y2="50" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+              <line x1="30" y1="20" x2="380" y2="20" stroke="#4DA3FF" stroke-width=".5" opacity=".15"/>
+
+              <!-- Zone avant (gris) -->
+              <rect x="30" y="15" width="120" height="95" fill="rgba(140,160,200,.06)"/>
+              <text x="90" y="10" text-anchor="middle" fill="#8DA0C0" font-size="9">AVANT</text>
+              <!-- Zone après (vert) -->
+              <rect x="150" y="15" width="230" height="95" fill="rgba(52,211,153,.06)"/>
+              <text x="265" y="10" text-anchor="middle" fill="#34D399" font-size="9">APRÈS CRM</text>
+
+              <!-- Courbe avant (plate) -->
+              <polyline fill="none" stroke="#8DA0C0" stroke-width="2" stroke-dasharray="3 3"
+                points="45,80 75,78 105,79 135,77"/>
+              <!-- Courbe après (croissance) -->
+              <polyline fill="none" stroke="url(#lineGrad2)" stroke-width="2.5"
+                points="150,77 180,70 210,58 240,48 270,38 300,32 330,26 360,22 375,20"/>
+              <circle cx="375" cy="20" r="4" fill="#34D399"/>
+              <text x="375" y="15" text-anchor="end" fill="#34D399" font-size="10">+18%</text>
+
+              <text x="45" y="126" text-anchor="middle">T1</text>
+              <text x="135" y="126" text-anchor="middle">T2</text>
+              <text x="225" y="126" text-anchor="middle">T3</text>
+              <text x="315" y="126" text-anchor="middle">T4</text>
+
+              <defs>
+                <linearGradient id="lineGrad2" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#34D399"/>
+                </linearGradient>
+              </defs>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>+18 % CA</span><span>Vision 360°</span><span>Temps réel</span></div>
+        <div class="stack">Python · FastAPI · Odoo API · Power BI · PostgreSQL</div>
+      </article>
+
+      <!-- Migration ERP DEKRA -->
+      <article class="reveal" data-cat="erp">
+        <h3 data-fr="Migration ERP DEKRA — 100+ utilisateurs" data-en="DEKRA ERP Migration — 100+ users">Migration ERP DEKRA — 100+ utilisateurs</h3>
+        <div class="tag" data-fr="ERP · En production" data-en="ERP · Live">ERP · En production</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Migration d'un ERP vers Sage X3 pour 100+ utilisateurs, avec 5 équipes (IT, conformité, achats, finance, RH) et des contraintes réglementaires fortes." data-en="ERP migration to Sage X3 for 100+ users, with 5 teams (IT, compliance, purchasing, finance, HR) and strong regulatory constraints.">Migration d'un ERP vers Sage X3 pour 100+ utilisateurs, avec 5 équipes (IT, conformité, achats, finance, RH) et des contraintes réglementaires fortes.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Pilotage de bout en bout : analyse des besoins, spécifications fonctionnelles, coordination des équipes, formation utilisateurs, documentation et runbooks." data-en="End-to-end management: requirements analysis, functional specs, team coordination, user training, documentation and runbooks.">Pilotage de bout en bout : analyse des besoins, spécifications fonctionnelles, coordination des équipes, formation utilisateurs, documentation et runbooks.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Progression de la migration (utilisateurs)" data-en="Migration progress (users)">Progression de la migration (utilisateurs)</div>
+          <svg viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart: migration progress">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <line x1="30" y1="90" x2="380" y2="90" stroke="#4DA3FF" stroke-width="1" opacity=".4"/>
+              <rect x="60" y="60" width="50" height="30" rx="4" fill="#4DA3FF" opacity=".5"/>
+              <text x="85" y="56" text-anchor="middle" fill="#4DA3FF" font-size="10">25</text>
+              <text x="85" y="106" text-anchor="middle">M1</text>
+
+              <rect x="140" y="40" width="50" height="50" rx="4" fill="#4DA3FF" opacity=".7"/>
+              <text x="165" y="36" text-anchor="middle" fill="#4DA3FF" font-size="10">50</text>
+              <text x="165" y="106" text-anchor="middle">M3</text>
+
+              <rect x="220" y="20" width="50" height="70" rx="4" fill="#22D3EE" opacity=".85"/>
+              <text x="245" y="16" text-anchor="middle" fill="#22D3EE" font-size="10">80</text>
+              <text x="245" y="106" text-anchor="middle">M5</text>
+
+              <rect x="300" y="10" width="50" height="80" rx="4" fill="#34D399" opacity=".9"/>
+              <text x="325" y="6" text-anchor="middle" fill="#34D399" font-size="10">100+</text>
+              <text x="325" y="106" text-anchor="middle">M6</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>100+ users</span><span>6 mois</span><span>0 € dépassement</span></div>
+        <div class="stack">Sage X3 · PostgreSQL · JIRA · ServiceNow</div>
+      </article>
+
+      <!-- Modules Odoo / Sage X3 -->
+      <article class="reveal" data-cat="erp dev">
+        <h3 data-fr="Modules Odoo / Sage X3 sur mesure" data-en="Custom Odoo / Sage X3 Modules">Modules Odoo / Sage X3 sur mesure</h3>
+        <div class="tag" data-fr="ERP · Développement" data-en="ERP · Development">ERP · Développement</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Processus métiers manuels (achats, ventes, stock, comptabilité) chronophages et source d'erreurs." data-en="Time-consuming manual business processes (purchasing, sales, stock, accounting) prone to errors.">Processus métiers manuels (achats, ventes, stock, comptabilité) chronophages et source d'erreurs.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Développement de modules Python/XML adaptés au métier, avec tests, documentation et formation des utilisateurs." data-en="Development of custom Python/XML modules, with tests, documentation and user training.">Développement de modules Python/XML adaptés au métier, avec tests, documentation et formation des utilisateurs.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Processus automatisés (20+)" data-en="Automated processes (20+)">Processus automatisés (20+)</div>
+          <svg viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Progress: automated processes">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <rect x="30" y="35" width="340" height="40" rx="8" fill="rgba(77,163,255,.08)" stroke="#4DA3FF" stroke-width="1"/>
+              <rect x="30" y="35" width="340" height="40" rx="8" fill="url(#barGrad)" opacity=".85"/>
+              <text x="200" y="60" text-anchor="middle" fill="#fff" font-size="14" font-weight="600" font-family="IBM Plex Serif">20+ / 25</text>
+              <text x="200" y="95" text-anchor="middle" fill="#34D399" font-size="11">+25 % efficacité opérationnelle</text>
+
+              <defs>
+                <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#4DA3FF"/><stop offset="100%" stop-color="#7C5CFF"/>
+                </linearGradient>
+              </defs>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>+25 % efficacité</span><span>20+ process</span></div>
+        <div class="stack">Python · XML · PostgreSQL · Odoo</div>
+      </article>
+
+      <!-- Infrastructure 50+ users -->
+      <article class="reveal" data-cat="infra">
+        <h3 data-fr="Infrastructure IT 50+ utilisateurs (pharma)" data-en="IT Infrastructure 50+ users (pharma)">Infrastructure IT 50+ utilisateurs (pharma)</h3>
+        <div class="tag" data-fr="Infra · Critique" data-en="Infra · Critical">Infra · Critique</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Infrastructure IT à maintenir en environnement pharma réglementé (BPF/GMP), avec exigence de disponibilité quasi permanente." data-en="IT infrastructure to maintain in a regulated pharma environment (GMP), with near-permanent availability requirement.">Infrastructure IT à maintenir en environnement pharma réglementé (BPF/GMP), avec exigence de disponibilité quasi permanente.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Administration Windows Server 2022, AD, GPO, DNS, DHCP, Exchange. Réseau Cisco/HP, FortiGate / pfSense. EDR, patch management, SIEM." data-en="Windows Server 2022, AD, GPO, DNS, DHCP, Exchange administration. Cisco/HP network, FortiGate / pfSense. EDR, patch management, SIEM.">Administration Windows Server 2022, AD, GPO, DNS, DHCP, Exchange. Réseau Cisco/HP, FortiGate / pfSense. EDR, patch management, SIEM.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Répartition de la disponibilité (12 mois)" data-en="Availability breakdown (12 months)">Répartition de la disponibilité (12 mois)</div>
+          <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut: uptime">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <circle cx="100" cy="60" r="40" fill="none" stroke="rgba(120,160,255,.15)" stroke-width="14"/>
+              <circle cx="100" cy="60" r="40" fill="none" stroke="#34D399" stroke-width="14"
+                      stroke-dasharray="248 251" stroke-dashoffset="0" transform="rotate(-90 100 60)"/>
+              <text x="100" y="58" text-anchor="middle" fill="#fff" font-size="16" font-family="IBM Plex Serif" font-weight="600">99.9%</text>
+              <text x="100" y="74" text-anchor="middle" fill="#8DA0C0" font-size="9">UPTIME</text>
+
+              <circle cx="220" cy="50" r="5" fill="#34D399"/>
+              <text x="232" y="54" fill="#E8EEF8">99,9 % uptime</text>
+              <circle cx="220" cy="72" r="5" fill="#F5B942"/>
+              <text x="232" y="76" fill="#E8EEF8">0,1 % maintenance planifiée</text>
+              <circle cx="220" cy="94" r="5" fill="#F87171"/>
+              <text x="232" y="98" fill="#E8EEF8">0 % incident non planifié</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>99,9 % dispo</span><span>50+ users</span></div>
+        <div class="stack">Windows Server · AD · FortiGate · pfSense</div>
+      </article>
+
+      <!-- Supervision multi-sites -->
+      <article class="reveal" data-cat="infra">
+        <h3 data-fr="Supervision & observabilité multi-sites" data-en="Multi-site monitoring & observability">Supervision & observabilité multi-sites</h3>
+        <div class="tag">Monitoring</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Absence de visibilité centralisée sur l'état du réseau et des serveurs, réactivité insuffisante sur incidents." data-en="No centralized visibility over network and servers, insufficient incident responsiveness.">Absence de visibilité centralisée sur l'état du réseau et des serveurs, réactivité insuffisante sur incidents.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Mise en place d'une supervision LAN/WAN avec alertes, dashboards SLA, corrélation d'événements et journalisation centralisée." data-en="LAN/WAN monitoring setup with alerts, SLA dashboards, event correlation and centralized logging.">Mise en place d'une supervision LAN/WAN avec alertes, dashboards SLA, corrélation d'événements et journalisation centralisée.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Incidents détectés / résolus" data-en="Incidents detected / resolved">Incidents détectés / résolus</div>
+          <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart: incidents">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <text x="30" y="20" fill="#E8EEF8">Détection</text>
+              <rect x="140" y="8" width="220" height="18" rx="3" fill="#22D3EE" opacity=".9"/>
+              <text x="250" y="22" text-anchor="middle" fill="#fff" font-size="10">100 %</text>
+
+              <text x="30" y="50" fill="#E8EEF8">Résolution &lt; 4 h</text>
+              <rect x="140" y="38" width="200" height="18" rx="3" fill="#34D399" opacity=".9"/>
+              <text x="240" y="52" text-anchor="middle" fill="#fff" font-size="10">92 %</text>
+
+              <text x="30" y="80" fill="#E8EEF8">Escalade N3</text>
+              <rect x="140" y="68" width="50" height="18" rx="3" fill="#F5B942" opacity=".9"/>
+              <text x="165" y="82" text-anchor="middle" fill="#fff" font-size="10">8 %</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>SLA suivis</span><span>Alerting temps réel</span></div>
+        <div class="stack">Zabbix · Nagios · PRTG · ELK Stack</div>
+      </article>
+
+      <!-- Déploiement Web -->
+      <article class="reveal" data-cat="dev web">
+        <h3 data-fr="Déploiement de projets web" data-en="Web project deployment">Déploiement de projets web</h3>
+        <div class="tag" data-fr="Dev · Web" data-en="Dev · Web">Dev · Web</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Applications web livrées mais pas industrialisées : pas de CI/CD, certificats SSL à renouveler manuellement, pas de sauvegardes." data-en="Web apps delivered but not industrialized: no CI/CD, manually renewed SSL certificates, no backups.">Applications web livrées mais pas industrialisées : pas de CI/CD, certificats SSL à renouveler manuellement, pas de sauvegardes.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Mise en production industrialisée : Nginx / Apache, SSL, DNS, Docker, CI/CD, hébergement VPS ou cloud, monitoring et sauvegardes automatiques." data-en="Industrialized production setup: Nginx / Apache, SSL, DNS, Docker, CI/CD, VPS or cloud hosting, automated monitoring and backups.">Mise en production industrialisée : Nginx / Apache, SSL, DNS, Docker, CI/CD, hébergement VPS ou cloud, monitoring et sauvegardes automatiques.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Temps de déploiement par release" data-en="Deployment time per release">Temps de déploiement par release</div>
+          <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart: deployment time">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <text x="20" y="20" fill="#E8EEF8">Manuel</text>
+              <rect x="100" y="8" width="240" height="18" rx="3" fill="#F87171" opacity=".85"/>
+              <text x="220" y="22" text-anchor="middle" fill="#fff" font-size="10">~45 min</text>
+
+              <text x="20" y="55" fill="#E8EEF8">Avec CI/CD</text>
+              <rect x="100" y="43" width="144" height="18" rx="3" fill="#34D399" opacity=".9"/>
+              <text x="172" y="57" text-anchor="middle" fill="#fff" font-size="10">~27 min</text>
+
+              <text x="220" y="90" text-anchor="middle" fill="#34D399" font-size="11">−40 % de temps de mise en production</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>CI/CD</span><span>SSL</span><span>Monitoring</span></div>
+        <div class="stack">Nginx · Docker · VPS · CI/CD · SSL</div>
+      </article>
+
+      <!-- Pipeline Scraping -->
+      <article class="reveal" data-cat="dev scrap data">
+        <h3 data-fr="Pipeline de scraping & normalisation" data-en="Data scraping & normalization pipeline">Pipeline de scraping & normalisation</h3>
+        <div class="tag" data-fr="Scraping · Data" data-en="Scraping · Data">Scraping · Data</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Données dispersées sur plusieurs sources, formats hétérogènes, pas de pipeline fiable pour les exploiter." data-en="Data scattered across multiple sources, heterogeneous formats, no reliable pipeline to exploit them.">Données dispersées sur plusieurs sources, formats hétérogènes, pas de pipeline fiable pour les exploiter.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Collecte automatisée (Scrapy, BeautifulSoup, Selenium, API REST), nettoyage, normalisation, validation et stockage structuré en PostgreSQL." data-en="Automated collection (Scrapy, BeautifulSoup, Selenium, REST APIs), cleaning, normalization, validation and structured storage in PostgreSQL.">Collecte automatisée (Scrapy, BeautifulSoup, Selenium, API REST), nettoyage, normalisation, validation et stockage structuré en PostgreSQL.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Qualité des données (avant / après)" data-en="Data quality (before / after)">Qualité des données (avant / après)</div>
+          <svg viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bars: data quality">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <text x="30" y="20" fill="#E8EEF8">Doublons</text>
+              <rect x="140" y="8" width="180" height="16" rx="3" fill="#F87171" opacity=".8"/>
+              <text x="230" y="21" text-anchor="middle" fill="#fff" font-size="10">Avant ~18 %</text>
+              <rect x="140" y="8" width="20" height="16" rx="3" fill="#34D399"/>
+              <text x="170" y="21" fill="#34D399" font-size="10">→ 2 %</text>
+
+              <text x="30" y="50" fill="#E8EEF8">Champs manquants</text>
+              <rect x="140" y="38" width="180" height="16" rx="3" fill="#F87171" opacity=".8"/>
+              <text x="230" y="51" text-anchor="middle" fill="#fff" font-size="10">Avant ~25 %</text>
+              <rect x="140" y="38" width="32" height="16" rx="3" fill="#34D399"/>
+              <text x="182" y="51" fill="#34D399" font-size="10">→ 4 %</text>
+
+              <text x="30" y="80" fill="#E8EEF8">Formats non normés</text>
+              <rect x="140" y="68" width="180" height="16" rx="3" fill="#F87171" opacity=".8"/>
+              <text x="230" y="81" text-anchor="middle" fill="#fff" font-size="10">Avant ~40 %</text>
+              <rect x="140" y="68" width="24" height="16" rx="3" fill="#34D399"/>
+              <text x="174" y="81" fill="#34D399" font-size="10">→ 5 %</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>Automatisé</span><span>Normalisation</span><span>Qualité data</span></div>
+        <div class="stack">Scrapy · BeautifulSoup · Pandas · PostgreSQL</div>
+        <a class="gh-link" href="https://github.com/ituthmanenginerrr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          github.com/ituthmanenginerrr
+        </a>
+      </article>
+
+      <!-- Pipelines IA bout en bout -->
+      <article class="reveal" data-cat="ia dev data">
+        <h3 data-fr="Pipelines IA de bout en bout" data-en="End-to-end AI pipelines">Pipelines IA de bout en bout</h3>
+        <div class="tag" data-fr="IA · MLOps" data-en="AI · MLOps">IA · MLOps</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Modèles IA développés en notebook, jamais industrialisés, non reproductibles et sans monitoring après mise en production." data-en="AI models developed in notebooks, never industrialized, non-reproducible and without post-production monitoring.">Modèles IA développés en notebook, jamais industrialisés, non reproductibles et sans monitoring après mise en production.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Pipelines IA complets : collecte (scraping/API) → normalisation → feature engineering → entraînement → évaluation → déploiement conteneurisé → monitoring (MLflow, Kubernetes)." data-en="Full AI pipelines: collection (scraping/API) → normalization → feature engineering → training → evaluation → containerized deployment → monitoring (MLflow, Kubernetes).">Pipelines IA complets : collecte (scraping/API) → normalisation → feature engineering → entraînement → évaluation → déploiement conteneurisé → monitoring (MLflow, Kubernetes).</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Étapes du pipeline IA industrialisé" data-en="Industrialized AI pipeline stages">Étapes du pipeline IA industrialisé</div>
+          <svg viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline stages">
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#8DA0C0" text-anchor="middle">
+              <rect x="10" y="25" width="55" height="30" rx="6" fill="rgba(77,163,255,.2)" stroke="#4DA3FF"/>
+              <text x="37" y="44" fill="#E8EEF8">Collecte</text>
+              <rect x="75" y="25" width="55" height="30" rx="6" fill="rgba(34,211,238,.2)" stroke="#22D3EE"/>
+              <text x="102" y="44" fill="#E8EEF8">Norm.</text>
+              <rect x="140" y="25" width="55" height="30" rx="6" fill="rgba(34,211,238,.2)" stroke="#22D3EE"/>
+              <text x="167" y="44" fill="#E8EEF8">Feature</text>
+              <rect x="205" y="25" width="55" height="30" rx="6" fill="rgba(124,92,255,.2)" stroke="#7C5CFF"/>
+              <text x="232" y="44" fill="#E8EEF8">Train</text>
+              <rect x="270" y="25" width="55" height="30" rx="6" fill="rgba(124,92,255,.2)" stroke="#7C5CFF"/>
+              <text x="297" y="44" fill="#E8EEF8">Test</text>
+              <rect x="335" y="25" width="55" height="30" rx="6" fill="rgba(52,211,153,.2)" stroke="#34D399"/>
+              <text x="362" y="44" fill="#E8EEF8">Deploy</text>
+
+              <path d="M65 40 L75 40" stroke="#8DA0C0"/>
+              <path d="M130 40 L140 40" stroke="#8DA0C0"/>
+              <path d="M195 40 L205 40" stroke="#8DA0C0"/>
+              <path d="M260 40 L270 40" stroke="#8DA0C0"/>
+              <path d="M325 40 L335 40" stroke="#8DA0C0"/>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>De bout en bout</span><span>MLOps</span></div>
+        <div class="stack">MLflow · Kubernetes · Python · Airflow</div>
+        <a class="gh-link" href="https://github.com/ituthmanenginerrr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          github.com/ituthmanenginerrr
+        </a>
+      </article>
+
+      <!-- RGPD ISO 27001 -->
+      <article class="reveal" data-cat="sec">
+        <h3 data-fr="15+ politiques RGPD / ISO 27001" data-en="15+ GDPR / ISO 27001 policies">15+ politiques RGPD / ISO 27001</h3>
+        <div class="tag" data-fr="Sécurité · Conformité" data-en="Security · Compliance">Sécurité · Conformité</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Absence de politiques de sécurité formalisées, droits d'accès non maîtrisés sur 100+ comptes." data-en="No formalized security policies, uncontrolled access rights on 100+ accounts.">Absence de politiques de sécurité formalisées, droits d'accès non maîtrisés sur 100+ comptes.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Déploiement de 15+ politiques, audit des droits, RBAC, MFA, playbooks d'incident, documentation et sensibilisation utilisateurs." data-en="Deployment of 15+ policies, access audit, RBAC, MFA, incident playbooks, documentation and user awareness.">Déploiement de 15+ politiques, audit des droits, RBAC, MFA, playbooks d'incident, documentation et sensibilisation utilisateurs.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Incidents sécurité — avant / après" data-en="Security incidents — before / after">Incidents sécurité — avant / après</div>
+          <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Incidents before after">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <text x="20" y="25" fill="#E8EEF8">Avant</text>
+              <rect x="90" y="13" width="220" height="18" rx="3" fill="#F87171" opacity=".85"/>
+              <text x="200" y="27" text-anchor="middle" fill="#fff" font-size="10">100 incidents / an</text>
+
+              <text x="20" y="55" fill="#E8EEF8">Après</text>
+              <rect x="90" y="43" width="154" height="18" rx="3" fill="#34D399" opacity=".9"/>
+              <text x="167" y="57" text-anchor="middle" fill="#fff" font-size="10">70 incidents / an</text>
+
+              <text x="200" y="90" text-anchor="middle" fill="#34D399" font-size="11">−30 % en 12 mois</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>−30 % incidents</span><span>12 mois</span></div>
+        <div class="stack">RGPD · ISO 27001 · RBAC · MFA</div>
+      </article>
+
+      <!-- PRA / PCA -->
+      <article class="reveal" data-cat="sec infra">
+        <h3 data-fr="PRA / PCA testés — RTO < 4 h" data-en="Tested DRP / BCP — RTO < 4h">PRA / PCA testés — RTO &lt; 4 h</h3>
+        <div class="tag" data-fr="Continuité · Résilience" data-en="Continuity · Resilience">Continuité · Résilience</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Aucun plan de reprise formalisé ni testé, risque opérationnel élevé en cas d'incident majeur." data-en="No formalized or tested recovery plan, high operational risk in case of major incident.">Aucun plan de reprise formalisé ni testé, risque opérationnel élevé en cas d'incident majeur.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Conception, rédaction, tests réguliers et documentation opérationnelle des plans de reprise (PRA) et de continuité (PCA)." data-en="Design, writing, regular testing and operational documentation of disaster recovery (DRP) and business continuity (BCP) plans.">Conception, rédaction, tests réguliers et documentation opérationnelle des plans de reprise (PRA) et de continuité (PCA).</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="RTO cible vs réel (heures)" data-en="RTO target vs actual (hours)">RTO cible vs réel (heures)</div>
+          <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RTO comparison">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <text x="20" y="30" fill="#E8EEF8">Cible</text>
+              <rect x="120" y="18" width="80" height="18" rx="3" fill="#F5B942" opacity=".9"/>
+              <text x="160" y="32" text-anchor="middle" fill="#fff" font-size="10">4 h</text>
+
+              <text x="20" y="60" fill="#E8EEF8">Réel mesuré</text>
+              <rect x="120" y="48" width="60" height="18" rx="3" fill="#34D399" opacity=".9"/>
+              <text x="150" y="62" text-anchor="middle" fill="#fff" font-size="10">3 h 10</text>
+
+              <text x="200" y="32" fill="#34D399" font-size="10">✓ Objectif tenu</text>
+              <text x="200" y="62" fill="#8DA0C0" font-size="9">Tests trimestriels</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>RTO &lt; 4 h</span><span>Tests réguliers</span></div>
+        <div class="stack">PRA · PCA · Runbooks · Documentation</div>
+      </article>
+
+      <!-- BI Pharma -->
+      <article class="reveal" data-cat="data">
+        <h3 data-fr="BI pharmaceutique — traçabilité BPF/GMP" data-en="Pharma BI — GMP/BPF traceability">BI pharmaceutique — traçabilité BPF/GMP</h3>
+        <div class="tag" data-fr="Data · Pharma" data-en="Data · Pharma">Data · Pharma</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Suivi de production et traçabilité réglementaire (BPF/GMP) réalisés sur Excel, sans consolidation ni indicateurs temps réel." data-en="Production monitoring and regulatory traceability (GMP/BPF) done in Excel, with no consolidation or real-time indicators.">Suivi de production et traçabilité réglementaire (BPF/GMP) réalisés sur Excel, sans consolidation ni indicateurs temps réel.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Déploiement Power BI + ETL : consolidation des sources ERP, dashboards opérationnels pour les équipes qualité et production." data-en="Power BI + ETL deployment: consolidation of ERP sources, operational dashboards for quality and production teams.">Déploiement Power BI + ETL : consolidation des sources ERP, dashboards opérationnels pour les équipes qualité et production.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Délai de mise à disposition des rapports" data-en="Report availability delay">Délai de mise à disposition des rapports</div>
+          <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Report delay">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <text x="20" y="30" fill="#E8EEF8">Avant (Excel)</text>
+              <rect x="150" y="18" width="180" height="18" rx="3" fill="#F87171" opacity=".85"/>
+              <text x="240" y="32" text-anchor="middle" fill="#fff" font-size="10">J+3</text>
+
+              <text x="20" y="60" fill="#E8EEF8">Après (Power BI)</text>
+              <rect x="150" y="48" width="40" height="18" rx="3" fill="#34D399" opacity=".9"/>
+              <text x="170" y="62" text-anchor="middle" fill="#fff" font-size="10">Temps réel</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>Traçabilité BPF</span><span>Temps réel</span></div>
+        <div class="stack">Power BI · ETL · SQL · ERP</div>
+      </article>
+
+      <!-- IDS NLP + GAN -->
+      <article class="reveal" data-cat="ia sec">
+        <h3 data-fr="IDS hybride NLP + GAN" data-en="Hybrid NLP + GAN IDS">IDS hybride NLP + GAN</h3>
+        <div class="tag" data-fr="Recherche & Innovation" data-en="R&D · AI">Recherche & Innovation</div>
+        <div class="case">
+          <div class="case-row"><b data-fr="Problème" data-en="Problem">Problème</b><span data-fr="Détection d'intrusion classique par règles, inefficace face aux menaces nouvelles et aux patterns inconnus." data-en="Classic rule-based intrusion detection, ineffective against new threats and unknown patterns.">Détection d'intrusion classique par règles, inefficace face aux menaces nouvelles et aux patterns inconnus.</span></div>
+          <div class="case-row"><b data-fr="Solution" data-en="Solution">Solution</b><span data-fr="Système hybride combinant NLP (analyse sémantique des logs) et GAN (génération adversariale pour robustesse), intégré à un pipeline de supervision temps réel." data-en="Hybrid system combining NLP (semantic log analysis) and GAN (adversarial generation for robustness), integrated into a real-time monitoring pipeline.">Système hybride combinant NLP (analyse sémantique des logs) et GAN (génération adversariale pour robustesse), intégré à un pipeline de supervision temps réel.</span></div>
+        </div>
+        <div class="chart">
+          <div class="chart-title" data-fr="Détection : règles vs NLP+GAN (%)" data-en="Detection: rules vs NLP+GAN (%)">Détection : règles vs NLP+GAN (%)</div>
+          <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Detection comparison">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#8DA0C0">
+              <text x="20" y="30" fill="#E8EEF8">Règles</text>
+              <rect x="120" y="18" width="120" height="18" rx="3" fill="#F87171" opacity=".8"/>
+              <text x="180" y="32" text-anchor="middle" fill="#fff" font-size="10">62 %</text>
+
+              <text x="20" y="60" fill="#E8EEF8">NLP + GAN</text>
+              <rect x="120" y="48" width="200" height="18" rx="3" fill="#34D399" opacity=".9"/>
+              <text x="220" y="62" text-anchor="middle" fill="#fff" font-size="10">89 %</text>
+
+              <text x="200" y="90" text-anchor="middle" fill="#34D399" font-size="11">+27 points de détection</text>
+            </g>
+          </svg>
+        </div>
+        <div class="impact"><span>Détection temps réel</span><span>NLP + GAN</span></div>
+        <div class="stack">Python · Kubernetes · MLflow · GAN</div>
+        <a class="gh-link" href="https://github.com/ituthmanenginerrr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          github.com/ituthmanenginerrr
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences">
+    <h2 data-fr="Compétences" data-en="Skills">Compétences</h2>
+    <p class="section-sub" data-fr="Un socle technique large — du système à l'IA, en passant par le développement, le scraping, la sécurité et la gouvernance." data-en="A broad technical foundation — from systems to AI, through development, scraping, security and governance.">Un socle technique large — du système à l'IA, en passant par le développement, le scraping, la sécurité et la gouvernance.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3 data-fr="ERP / CRM" data-en="ERP / CRM">ERP / CRM</h3>
+        <div class="chips"><span>Odoo</span><span>Sage X3</span><span>CRM custom</span><span>Administration ERP</span><span>Modules Python/XML</span><span>Migration de données</span><span>ServiceNow</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Infrastructure & Supervision" data-en="Infrastructure & Monitoring">Infrastructure & Supervision</h3>
+        <div class="chips"><span>Windows Server 2016-2022</span><span>Linux / Ubuntu</span><span>Active Directory</span><span>GPO</span><span>DNS / DHCP</span><span>Exchange</span><span>VMware</span><span>Hyper-V</span><span>Zabbix</span><span>Prometheus</span><span>Grafana</span><span>Nagios</span><span>PRTG</span><span>ELK Stack</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Réseau" data-en="Network">Réseau</h3>
+        <div class="chips"><span>TCP/IP</span><span>LAN / WAN</span><span>VPN site-à-site</span><span>VPN SSL</span><span>Cisco</span><span>HP</span><span>FortiGate</span><span>pfSense</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Développement & API" data-en="Development & APIs">Développement & API</h3>
+        <div class="chips"><span>Python</span><span>JavaScript</span><span>HTML / CSS</span><span>Node.js</span><span>React</span><span>PHP</span><span>REST API</span><span>FastAPI</span><span>Flask</span><span>Django</span><span>Git</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Data Scraping & Normalisation" data-en="Data Scraping & Normalization">Data Scraping & Normalisation</h3>
+        <div class="chips"><span>Scrapy</span><span>BeautifulSoup</span><span>Selenium</span><span>Requests</span><span>Pandas</span><span>NumPy</span><span>Regex</span><span>JSON / XML</span><span>API REST</span><span>Normalisation</span><span>Validation</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Déploiement Web & Cloud" data-en="Web Deployment & Cloud">Déploiement Web & Cloud</h3>
+        <div class="chips"><span>Nginx</span><span>Apache</span><span>Docker</span><span>CI/CD</span><span>SSL</span><span>DNS</span><span>VPS</span><span>GitHub Pages</span><span>Vercel</span><span>AWS</span><span>Azure</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3>Cloud & DevOps</h3>
+        <div class="chips"><span>AWS</span><span>Microsoft Azure</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Git</span><span>Terraform</span><span>MLflow</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Scripting & Données" data-en="Scripting & Data">Scripting & Données</h3>
+        <div class="chips"><span>Python</span><span>PowerShell</span><span>Bash</span><span>SQL</span><span>PostgreSQL</span><span>Power BI</span><span>ETL</span><span>Hadoop</span><span>Spark</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="IA / NLP / NLG / ML" data-en="AI / NLP / NLG / ML">IA / NLP / NLG / ML</h3>
+        <div class="chips"><span>NLP</span><span>NLG</span><span>LLM / Transformers</span><span>Machine Learning</span><span>XGBoost</span><span>GAN</span><span>Scikit-learn</span><span>TensorFlow</span><span>HuggingFace</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Pipelines IA / MLOps" data-en="AI Pipelines / MLOps">Pipelines IA / MLOps</h3>
+        <div class="chips"><span>MLflow</span><span>Airflow</span><span>Kubeflow</span><span>DVC</span><span>LangChain</span><span>RAG</span><span>Vector DB</span><span>Feature Store</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="Sécurité & Conformité" data-en="Security & Compliance">Sécurité & Conformité</h3>
+        <div class="chips"><span>RGPD / GDPR</span><span>ISO 27001</span><span>Sécurité SaaS</span><span>SIEM</span><span>EDR</span><span>MFA / OAuth2</span><span>TLS</span><span>IAM</span><span>RBAC</span><span>Audit des droits</span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3 data-fr="ITSM & Gouvernance" data-en="ITSM & Governance">ITSM & Gouvernance</h3>
+        <div class="chips"><span>ITIL</span><span>ServiceNow</span><span>JIRA</span><span>BPMN</span><span>Agile / Scrum</span><span>Spécifications fonctionnelles</span><span>Gestion de projet</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & FORMATION -->
+  <section>
+    <div class="two">
+      <div class="reveal">
+        <h2 data-fr="Certifications" data-en="Certifications">Certifications</h2>
+        <ul>
+          <li>Azure Solutions Architect Expert<small>Microsoft · <span data-fr="Octobre 2024" data-en="October 2024">Octobre 2024</span></small></li>
+          <li>Local Information Security<small>DEKRA France · 2025</small></li>
+          <li>AWS Data Scientist<small>Udemy · 2022</small></li>
+          <li>CompTIA Security+ / Microsoft SC-900<small data-fr="En préparation · 2026" data-en="In progress · 2026">En préparation · 2026</small></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h2 data-fr="Formation" data-en="Education">Formation</h2>
+        <ul>
+          <li data-fr="Doctorat — Intelligence Artificielle (NLP / LLM)" data-en="PhD — Artificial Intelligence (NLP / LLM)">Doctorat — Intelligence Artificielle (NLP / LLM)<small data-fr="École des Sciences de l'Information, Rabat · depuis 2023" data-en="School of Information Sciences, Rabat · since 2023">École des Sciences de l'Information, Rabat · depuis 2023</small></li>
+          <li data-fr="Master spécialisé — Traitement intelligent des systèmes" data-en="Specialized Master — Intelligent Systems Processing">Master spécialisé — Traitement intelligent des systèmes<small data-fr="Université Mohammed V, Rabat · 2017–2022" data-en="Mohammed V University, Rabat · 2017–2022">Université Mohammed V, Rabat · 2017–2022</small></li>
+          <li data-fr="Licence professionnelle — SI & Big Data" data-en="Professional Bachelor — IS & Big Data">Licence professionnelle — SI & Big Data<small data-fr="EST Salé · 2019–2020" data-en="EST Salé · 2019–2020">EST Salé · 2019–2020</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section id="temoignages">
+    <h2 data-fr="Ils en parlent" data-en="What they say">Ils en parlent</h2>
+    <p class="section-sub" data-fr="Retours de missions en environnement réglementé." data-en="Feedback from missions in regulated environments.">Retours de missions en environnement réglementé.</p>
+    <div class="roles">
+      <div class="role reveal">
+        <span class="lvl">DEKRA Automotive</span>
+        <h3 data-fr="Migration ERP 100+ utilisateurs" data-en="ERP migration 100+ users">Migration ERP 100+ utilisateurs</h3>
+        <p data-fr="« Pilotage exemplaire de la migration Sage X3. Coordination de 5 équipes, 0 dépassement, formation efficace. Othman a su allier expertise métier et technique. »</p>
+        <div class="tags"><em>ERP</em><em>Migration</em></div>
+      </div>
+      <div class="role reveal">
+        <span class="lvl">Kosmopharma / Steripharma</span>
+        <h3 data-fr="Infra critique & conformité" data-en="Critical infra & compliance">Infra critique & conformité</h3>
+        <p data-fr="« Infrastructure stabilisée à 99,9 %, PRA testé, traçabilité BPF via Power BI. Un profil rare qui comprend à la fois l’IT et les contraintes pharma. »</p>
+        <div class="tags"><em>Infra</em><em>Pharma</em></div>
+      </div>
+      <div class="role reveal">
+        <span class="lvl">Projet IA Pharma</span>
+        <h3 data-fr="Plateforme NLG" data-en="NLG Platform">Plateforme NLG</h3>
+        <p data-fr="« Réduction de 60 % du temps de rédaction des documents réglementaires. Solution industrialisée, intégrée à l’ERP, avec validation humaine. »</p>
+        <div class="tags"><em>IA</em><em>NLG</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="head">
+      <h2 data-fr="Un projet ERP, infra, data ou IA à concrétiser ?" data-en="An ERP, infra, data or AI project to bring to life?">Un projet ERP, infra, data ou IA à concrétiser ?</h2>
+      <p data-fr="Demandez un devis ou prenez rendez-vous. Je réponds en français, en arabe ou en anglais — généralement sous 48 h." data-en="Request a quote or book a call. I reply in French, Arabic or English — usually within 48h.">Demandez un devis ou prenez rendez-vous. Je réponds en français, en arabe ou en anglais — généralement sous 48 h.</p>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-card reveal">
+        <h3 data-fr="Envoyer un message" data-en="Send a message">Envoyer un message</h3>
+        <p class="fc-sub" data-fr="Votre client email s'ouvrira avec le message pré-rempli. Aucun service tiers." data-en="Your email client will open with the message pre-filled. No third-party service.">Votre client email s'ouvrira avec le message pré-rempli. Aucun service tiers.</p>
+
+        <div class="form-ok" id="form-ok" data-fr="✓ Votre client email va s'ouvrir…" data-en="✓ Your email client is about to open…">✓ Votre client email va s'ouvrir…</div>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="cf-name" data-fr="Votre nom" data-en="Your name">Votre nom</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Othman …">
+          </div>
+          <div class="field">
+            <label for="cf-email" data-fr="Votre email" data-en="Your email">Votre email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="vous@exemple.com">
+          </div>
+          <div class="field">
+            <label for="cf-subject" data-fr="Sujet" data-en="Subject">Sujet</label>
+            <select id="cf-subject" name="subject" required>
+              <option value="" data-fr="— Choisir —" data-en="— Choose —">— Choisir —</option>
+              <option value="erp" data-fr="Projet ERP (Odoo / Sage X3)" data-en="ERP project (Odoo / Sage X3)">Projet ERP (Odoo / Sage X3)</option>
+              <option value="infra" data-fr="Infrastructure / Réseau / Sécurité" data-en="Infrastructure / Network / Security">Infrastructure / Réseau / Sécurité</option>
+              <option value="dev" data-fr="Développement / Web / API" data-en="Development / Web / API">Développement / Web / API</option>
+              <option value="scrap" data-fr="Scraping / Data" data-en="Scraping / Data">Scraping / Data</option>
+              <option value="ia" data-fr="Projet IA / NLP / NLG / Pipeline" data-en="AI / NLP / NLG / Pipeline project">Projet IA / NLP / NLG / Pipeline</option>
+              <option value="crm" data-fr="CRM / Suivi CA / Intégration API" data-en="CRM / Revenue tracking / API integration">CRM / Suivi CA / Intégration API</option>
+              <option value="quote" data-fr="Demande de devis" data-en="Quote request">Demande de devis</option>
+              <option value="meeting" data-fr="Prise de rendez-vous" data-en="Meeting request">Prise de rendez-vous</option>
+              <option value="other" data-fr="Autre" data-en="Other">Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-message" data-fr="Votre message" data-en="Your message">Votre message</label>
+            <textarea id="cf-message" name="message" required placeholder="Décrivez votre besoin en quelques lignes…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <span data-fr="→ Envoyer le message" data-en="→ Send message">→ Envoyer le message</span>
+          </button>
+          <p class="form-note" data-fr-html="100 % open source — aucun service tiers, aucun tracker. Le message part depuis votre propre client email." data-en-html="100% open source — no third-party service, no tracker. The message is sent from your own email client.">
+            100 % open source — aucun service tiers, aucun tracker. Le message part depuis votre propre client email.
+          </p>
+        </form>
+      </div>
+
+      <div class="contact-side reveal">
+        <div class="cinfo">
+          <b>Calendly</b>
+          <a href="https://calendly.com/othman-elkhazraje" target="_blank" rel="noopener" data-fr="Prendre un RDV 15 min" data-en="Book a 15-min call">Prendre un RDV 15 min</a>
+        </div>
+        <div class="cinfo">
+          <b>LinkedIn</b>
+          <a href="https://www.linkedin.com/in/othman-elkhazraje" target="_blank" rel="noopener" data-fr="Voir mon profil" data-en="View my profile">Voir mon profil</a>
+        </div>
+        <div class="cinfo">
+          <b>GitHub</b>
+          <a href="https://github.com/ituthmanenginerrr" target="_blank" rel="noopener">github.com/ituthmanenginerrr</a>
+        </div>
+        <div class="cinfo">
+          <b data-fr="Localisation" data-en="Location">Localisation</b>
+          <span data-fr="Casablanca, Maroc" data-en="Casablanca, Morocco">Casablanca, Maroc</span>
+        </div>
+        <div class="cinfo">
+          <b data-fr="Langues" data-en="Languages">Langues</b>
+          <span data-fr="Français C1+ · Arabe natif · Anglais B2+" data-en="French C1+ · Native Arabic · English B2+">Français C1+ · Arabe natif · Anglais B2+</span>
+        </div>
+        <div class="cinfo">
+          <b data-fr="Disponibilité" data-en="Availability">Disponibilité</b>
+          <span class="availability" data-fr="Réponse sous 48 h" data-en="Reply within 48h">Réponse sous 48 h</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Othman ELKHAZRAJE · Consultant ERP, Cloud & IA · Casablanca, Maroc
+  </footer>
 </div>
-<script src="assets/js/main.js" defer></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ============ I18N ============ */
+(function(){
+  var currentLang = "fr";
+  var detailData = {
+    fr: {
+      erp:["ERP — Sage X3, Odoo, Modules avancés","Migration de 100+ utilisateurs en 6 mois (DEKRA) avec coordination multi-équipes et 0 dépassement. Développement de modules Python/XML sur mesure, intégrations API, gestion des workflows BPMN, et optimisation des processus métiers (+25 % d'efficacité). Expérience terrain en environnements réglementés (pharma, auto)."],
+      infra:["Infrastructure — Windows Server, Linux, AD, PRA","Administration d'infrastructures critiques (Windows Server 2016-2022, Linux, VMware/Hyper-V) pour 50+ utilisateurs. Conception de PRA/PCA testés (RTO < 4h), haute disponibilité 99,9 %, GPO avancées, supervision multi-sites. Expérience en environnements pharma réglementés (BPF/GMP)."],
+      dev:["Développement — Python, API, Modules métier","Développement de modules Odoo/Sage X3 en Python/XML, APIs REST (FastAPI), applications web industrialisées. Automatisation de processus, intégrations ERP-banque-CRM, et code maintenable avec tests et documentation. Focus sur la valeur métier et la maintenabilité."],
+      scrap:["Scraping & Normalisation — Pipelines robustes","Pipelines de collecte automatisée (Scrapy, Selenium, API) avec normalisation, dédoublonnage et validation de qualité des données. Stockage structuré PostgreSQL, gestion des formats hétérogènes, et industrialisation pour alimenter des modèles IA ou des ERP."],
+      web:["Déploiement Web — CI/CD, Sécurité, Monitoring","Mise en production industrialisée : Nginx, SSL automatisé, Docker, CI/CD, sauvegardes et monitoring. Réduction du temps de déploiement (−40 %). Approche DevSecOps pour applications web critiques."],
+      sec:["Sécurité — RGPD, ISO 27001, SIEM, Zero Trust","Déploiement de 15+ politiques RGPD/ISO 27001 (−30 % incidents). Audit des droits, RBAC, MFA, EDR, patch management, sécurisation API (TLS, OAuth2). PRA testés et sensibilisation utilisateurs. Expérience en conformité réglementaire."],
+      ops:["DevOps — Docker, Kubernetes, MLOps","Pipelines CI/CD conteneurisés, industrialisation de modèles IA avec Kubernetes et MLflow (−40 % temps de déploiement). Infrastructure as Code, monitoring continu, et culture DevOps appliquée à des projets data et ERP."],
+      data:["Data & BI — Power BI, ETL, Traçabilité","Dashboards Power BI et pipelines ETL pour traçabilité BPF/GMP et pilotage opérationnel. Consolidation multi-sources (ERP, production), indicateurs temps réel, et aide à la décision pour équipes qualité et direction."],
+      ia:["IA / NLP / NLG — Transformers, LLM, Production","Recherche doctorale en détection d'anomalies temps réel (AWS/Azure). Systèmes hybrides NLP+GAN pour IDS. Plateforme NLG pharma (−60 % temps de rédaction). Mise en production de modèles avec validation humaine et monitoring."],
+      pipe:["Pipelines IA — MLOps de bout en bout","Conception et industrialisation de pipelines IA complets : collecte → normalisation → feature engineering → entraînement → validation → déploiement conteneurisé → monitoring (MLflow, Airflow, Kubernetes). Reproductibilité, data drift, et réentraînement automatisé."]
+    },
+    en: {
+      erp:["ERP — Sage X3, Odoo, Advanced Modules","Migration of 100+ users in 6 months (DEKRA) with multi-team coordination and zero overrun. Custom Python/XML module development, API integrations, BPMN workflow management, and business process optimization (+25% efficiency). Field experience in regulated environments (pharma, automotive)."],
+      infra:["Infrastructure — Windows Server, Linux, AD, DRP","Administration of critical infrastructures (Windows Server 2016-2022, Linux, VMware/Hyper-V) for 50+ users. Design of tested DRP/BCP (RTO < 4h), 99.9% high availability, advanced GPO, multi-site monitoring. Experience in regulated pharma environments (GMP)."],
+      dev:["Development — Python, APIs, Business Modules","Development of Odoo/Sage X3 modules in Python/XML, REST APIs (FastAPI), industrialized web applications. Process automation, ERP-bank-CRM integrations, and maintainable code with tests and documentation. Focus on business value and maintainability."],
+      scrap:["Scraping & Normalization — Robust Pipelines","Automated collection pipelines (Scrapy, Selenium, APIs) with normalization, deduplication and data quality validation. Structured PostgreSQL storage, handling of heterogeneous formats, and industrialization to feed AI models or ERPs."],
+      web:["Web Deployment — CI/CD, Security, Monitoring","Industrialized production deployment: Nginx, automated SSL, Docker, CI/CD, backups and monitoring. Deployment time reduction (−40%). DevSecOps approach for critical web applications."],
+      sec:["Security — GDPR, ISO 27001, SIEM, Zero Trust","Deployment of 15+ GDPR/ISO 27001 policies (−30% incidents). Access audit, RBAC, MFA, EDR, patch management, API security (TLS, OAuth2). Tested DRP and user awareness. Experience in regulatory compliance."],
+      ops:["DevOps — Docker, Kubernetes, MLOps","Containerized CI/CD pipelines, AI model industrialization with Kubernetes and MLflow (−40% deployment time). Infrastructure as Code, continuous monitoring, and DevOps culture applied to data and ERP projects."],
+      data:["Data & BI — Power BI, ETL, Traceability","Power BI dashboards and ETL pipelines for GMP/BPF traceability and operational steering. Multi-source consolidation (ERP, production), real-time indicators, and decision support for quality and management teams."],
+      ia:["AI / NLP / NLG — Transformers, LLM, Production","PhD research on real-time anomaly detection (AWS/Azure). Hybrid NLP+GAN systems for IDS. Pharma NLG platform (−60% writing time). Production deployment of models with human validation and monitoring."],
+      pipe:["AI Pipelines — End-to-end MLOps","Design and industrialization of full AI pipelines: collection → normalization → feature engineering → training → validation → containerized deployment → monitoring (MLflow, Airflow, Kubernetes). Reproducibility, data drift, and automated retraining."]
+    }
+  };
+
+  function applyLang(lang){
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-fr]").forEach(function(el){
+      var txt = el.getAttribute("data-" + lang);
+      if(txt !== null) el.textContent = txt;
+    });
+    document.querySelectorAll("[data-fr-html]").forEach(function(el){
+      var html = el.getAttribute("data-" + lang + "-html");
+      if(html !== null) el.innerHTML = html;
+    });
+    document.getElementById("lang-fr").setAttribute("aria-pressed", lang === "fr" ? "true" : "false");
+    document.getElementById("lang-en").setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+    var active = document.querySelector(".chain button[aria-pressed='true']");
+    if(active) showDetail(active.dataset.k);
+    try{ localStorage.setItem("lang", lang); }catch(e){}
+  }
+
+  function showDetail(k){
+    var box = document.getElementById("detail");
+    var d = detailData[currentLang][k];
+    if(!d) return;
+    box.innerHTML = "<strong></strong><span></span>";
+    box.firstChild.textContent = d[0];
+    box.lastChild.textContent = d[1];
+  }
+
+  var btns = document.querySelectorAll(".chain button");
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      btns.forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      showDetail(b.dataset.k);
+    });
+  });
+
+  document.getElementById("lang-fr").addEventListener("click", function(){ applyLang("fr"); });
+  document.getElementById("lang-en").addEventListener("click", function(){ applyLang("en"); });
+
+  var saved = null;
+  try{ saved = localStorage.getItem("lang"); }catch(e){}
+  if(saved === "en") applyLang("en"); else { showDetail("erp"); }
+
+  window.__i18n = { applyLang: applyLang, getLang: function(){ return currentLang; } };
+})();
+
+/* ============ 3D NEURAL NETWORK ============ */
+(function(){
+  try{
+    if(!window.THREE) return;
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if(window.innerWidth < 720) return; // skip heavy 3D on mobile
+    var canvas=document.getElementById("bg-canvas");
+    var scene=new THREE.Scene();
+    var camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,1000);
+    camera.position.z=60;
+    var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:true});
+    renderer.setSize(window.innerWidth,window.innerHeight,false);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+    var NODES=window.innerWidth<720?55:100,RANGE=55,positions=[],velocities=[];
+    for(var i=0;i<NODES;i++){
+      positions.push((Math.random()-0.5)*RANGE*2,(Math.random()-0.5)*RANGE*2,(Math.random()-0.5)*RANGE*2);
+      velocities.push((Math.random()-0.5)*0.06,(Math.random()-0.5)*0.06,(Math.random()-0.5)*0.06);
+    }
+    var nodeGeo=new THREE.BufferGeometry();
+    nodeGeo.setAttribute("position",new THREE.Float32BufferAttribute(positions,3));
+    scene.add(new THREE.Points(nodeGeo,new THREE.PointsMaterial({color:0x4DA3FF,size:0.6,transparent:true,opacity:0.9,blending:THREE.AdditiveBlending,depthWrite:false})));
+    var maxLines=NODES*5,linePositions=new Float32Array(maxLines*6),lineGeo=new THREE.BufferGeometry();
+    lineGeo.setAttribute("position",new THREE.BufferAttribute(linePositions,3));
+    scene.add(new THREE.LineSegments(lineGeo,new THREE.LineBasicMaterial({color:0x7C5CFF,transparent:true,opacity:0.25,blending:THREE.AdditiveBlending,depthWrite:false})));
+    var mouseX=0,mouseY=0;
+    window.addEventListener("mousemove",function(e){mouseX=(e.clientX/window.innerWidth-0.5)*2;mouseY=(e.clientY/window.innerHeight-0.5)*2});
+    var clock=new THREE.Clock();
+    function animate(){
+      requestAnimationFrame(animate);
+      var t=clock.getElapsedTime(),pos=nodeGeo.attributes.position.array;
+      for(var i=0;i<NODES;i++){
+        var ix=i*3;
+        pos[ix]+=velocities[ix];pos[ix+1]+=velocities[ix+1];pos[ix+2]+=velocities[ix+2];
+        if(Math.abs(pos[ix])>RANGE)velocities[ix]*=-1;
+        if(Math.abs(pos[ix+1])>RANGE)velocities[ix+1]*=-1;
+        if(Math.abs(pos[ix+2])>RANGE)velocities[ix+2]*=-1;
+      }
+      nodeGeo.attributes.position.needsUpdate=true;
+      var lp=lineGeo.attributes.position.array,li=0,MD=14*14;
+      for(var a=0;a<NODES&&li<maxLines*6;a++){
+        for(var b=a+1;b<NODES&&li<maxLines*6;b++){
+          var dx=pos[a*3]-pos[b*3],dy=pos[a*3+1]-pos[b*3+1],dz=pos[a*3+2]-pos[b*3+2];
+          if(dx*dx+dy*dy+dz*dz<MD){
+            lp[li++]=pos[a*3];lp[li++]=pos[a*3+1];lp[li++]=pos[a*3+2];
+            lp[li++]=pos[b*3];lp[li++]=pos[b*3+1];lp[li++]=pos[b*3+2];
+          }
+        }
+      }
+      for(var k=li;k<maxLines*6;k++)lp[k]=0;
+      lineGeo.attributes.position.needsUpdate=true;
+      scene.rotation.y=t*0.04+mouseX*0.15;
+      scene.rotation.x=Math.sin(t*0.2)*0.05+mouseY*0.1;
+      renderer.render(scene,camera);
+    }
+    animate();
+    window.addEventListener("resize",function(){
+      camera.aspect=window.innerWidth/window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth,window.innerHeight,false);
+    });
+  }catch(e){}
+})();
+
+/* ============ PROJECT FILTERS ============ */
+(function(){
+  var btns=document.querySelectorAll(".proj-filters button");
+  var cards=document.querySelectorAll("#proj-grid article");
+  btns.forEach(function(b){
+    b.addEventListener("click",function(){
+      var f=b.dataset.f;
+      btns.forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+      cards.forEach(function(c){
+        var cat=(c.dataset.cat||"")+" ";
+        if(f==="all"||cat.indexOf(f+" ") > -1 || cat.indexOf(" "+f+" ") > -1){c.classList.remove("hidden")}
+        else{c.classList.add("hidden")}
+      });
+    });
+  });
+})();
+
+/* ============ 3D CARD EFFECT ============ */
+(function(){
+  document.querySelectorAll(".proj article").forEach(function(card){
+    card.addEventListener("mousemove",function(e){
+      var r=card.getBoundingClientRect();
+      card.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");
+      card.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%");
+    });
+  });
+})();
+
+/* ============ SCROLL REVEAL ============ */
+(function(){
+  var els=document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window)){els.forEach(function(el){el.classList.add("visible")});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}});
+  },{threshold:0.12,rootMargin:"0px 0px -60px 0px"});
+  els.forEach(function(el){io.observe(el)});
+})();
+
+/* ============ CONTACT FORM ============ */
+(function(){
+  var form=document.getElementById("contact-form");
+  var ok=document.getElementById("form-ok");
+  if(!form) return;
+
+  var labels = {
+    fr: {
+      subjectPrefix: "Nouvelle demande depuis le portfolio",
+      subjects: {
+        erp:"Projet ERP (Odoo / Sage X3)",
+        infra:"Infrastructure / Réseau / Sécurité",
+        dev:"Développement / Web / API",
+        scrap:"Scraping / Data",
+        ia:"Projet IA / NLP / NLG / Pipeline",
+        crm:"CRM / Suivi CA / Intégration API",
+        quote:"Demande de devis",
+        meeting:"Prise de rendez-vous",
+        other:"Autre"
+      },
+      from: "De", email: "Email", subject: "Sujet", message: "Message"
+    },
+    en: {
+      subjectPrefix: "New request from portfolio",
+      subjects: {
+        erp:"ERP project (Odoo / Sage X3)",
+        infra:"Infrastructure / Network / Security",
+        dev:"Development / Web / API",
+        scrap:"Scraping / Data",
+        ia:"AI / NLP / NLG / Pipeline project",
+        crm:"CRM / Revenue tracking / API integration",
+        quote:"Quote request",
+        meeting:"Meeting request",
+        other:"Other"
+      },
+      from: "From", email: "Email", subject: "Subject", message: "Message"
+    }
+  };
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var lang = (window.__i18n && window.__i18n.getLang()) || "fr";
+    var L = labels[lang];
+
+    var name = (document.getElementById("cf-name").value || "").trim();
+    var email = (document.getElementById("cf-email").value || "").trim();
+    var subjectKey = document.getElementById("cf-subject").value;
+    var message = (document.getElementById("cf-message").value || "").trim();
+
+    if(!name || !email || !subjectKey || !message){
+      alert(lang === "fr" ? "Merci de remplir tous les champs." : "Please fill in all fields.");
+      return;
+    }
+    var subjectLine = "[" + L.subjectPrefix + "] " + (L.subjects[subjectKey] || subjectKey);
+    var bodyLines = [L.from + " : " + name, L.email + " : " + email, L.subject + " : " + (L.subjects[subjectKey] || subjectKey), "", L.message + " :", message];
+    var mailto = "mailto:o.elkhazraje@gmail.com?subject=" + encodeURIComponent(subjectLine) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+    ok.classList.add("show");
+    setTimeout(function(){ window.location.href = mailto; }, 400);
+    setTimeout(function(){ form.reset(); setTimeout(function(){ ok.classList.remove("show"); }, 4000); }, 1500);
+  });
+})();
+</script>
 </body>
 </html>
