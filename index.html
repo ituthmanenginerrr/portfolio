@@ -238,7 +238,7 @@ section>h2::before{content:"";width:34px;height:2px;background:linear-gradient(9
 
 footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:12.5px;text-align:center;font-family:"JetBrains Mono",monospace;margin-top:60px}
 
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal{opacity:1;transform:none}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 @media (max-width:880px){
@@ -1594,17 +1594,11 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   if(typeof gsap === "undefined") return;
   gsap.registerPlugin(ScrollTrigger);
 
-  // Hero reveal
-  gsap.to(".hero h1", {opacity:1, y:0, duration:1.1, ease:"power3.out", delay:.2});
-  gsap.to(".hero .lead", {opacity:1, y:0, duration:1, ease:"power3.out", delay:.45});
-  gsap.to(".hero-actions", {opacity:1, y:0, duration:.9, ease:"power3.out", delay:.7});
-  gsap.to(".kpis", {opacity:1, y:0, duration:1, ease:"power3.out", delay:.9});
-  gsap.to(".chain", {opacity:1, y:0, duration:1, ease:"power3.out", delay:1.1});
+  // Hero animations removed — content stays visible
+  // gsap.to(".hero h1", ...)
 
-  // Scroll reveals
-  gsap.utils.toArray(".reveal").forEach(function(el){
-    gsap.from(el, {scrollTrigger:{trigger:el, start:"top 85%"}, opacity:0, y:30, duration:.8, ease:"power2.out"});
-  });
+  // Scroll reveals disabled to keep content always visible
+  // gsap.utils.toArray(".reveal").forEach(...)
 
   // Subtle 3D tilt on project cards
   document.querySelectorAll(".proj article").forEach(function(card){
