@@ -48,7 +48,7 @@
 html{scroll-behavior:smooth;background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 #bg-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.vignette{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,transparent 0%,rgba(5,7,15,.6) 70%,rgba(5,7,15,.95) 100%)}
+.vignette{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,transparent 0%,rgba(5,7,15,.75) 60%,rgba(5,7,15,.98) 100%)}
 .wrap{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:0 28px}
 h1,h2,h3,h4{font-family:"IBM Plex Serif",Georgia,serif;font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
 a{color:var(--accent);text-decoration:none}
@@ -1419,17 +1419,17 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
     }
     var nodeGeo=new THREE.BufferGeometry();
     nodeGeo.setAttribute("position",new THREE.Float32BufferAttribute(positions,3));
-    var points=new THREE.Points(nodeGeo,new THREE.PointsMaterial({color:0x4DA3FF,size:0.7,transparent:true,opacity:0.85,blending:THREE.AdditiveBlending,depthWrite:false}));
+    var points=new THREE.Points(nodeGeo,new THREE.PointsMaterial({color:0x4DA3FF,size:0.45,transparent:true,opacity:0.55,blending:THREE.AdditiveBlending,depthWrite:false}));
     scene.add(points);
 
     var maxLines=NODES*4,linePositions=new Float32Array(maxLines*6),lineGeo=new THREE.BufferGeometry();
     lineGeo.setAttribute("position",new THREE.BufferAttribute(linePositions,3));
-    scene.add(new THREE.LineSegments(lineGeo,new THREE.LineBasicMaterial({color:0x7C5CFF,transparent:true,opacity:0.22,blending:THREE.AdditiveBlending,depthWrite:false})));
+    scene.add(new THREE.LineSegments(lineGeo,new THREE.LineBasicMaterial({color:0x7C5CFF,transparent:true,opacity:0.12,blending:THREE.AdditiveBlending,depthWrite:false})));
 
     // Subtle 3D geometric accent (torus knot)
     var torus=new THREE.Mesh(
       new THREE.TorusKnotGeometry(8,1.2,100,16),
-      new THREE.MeshBasicMaterial({color:0x22D3EE,wireframe:true,transparent:true,opacity:0.15})
+      new THREE.MeshBasicMaterial({color:0x22D3EE,wireframe:true,transparent:true,opacity:0.06})
     );
     torus.position.set(18,-8,-15);
     scene.add(torus);
@@ -1450,9 +1450,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
         // gentle mouse attraction
         var dx=mouseX-pos[ix],dy=mouseY-pos[ix+1];
         var dist=Math.sqrt(dx*dx+dy*dy);
-        if(dist<25&&dist>0.1){
-          velocities[ix]+=dx*0.0008;
-          velocities[ix+1]+=dy*0.0008;
+        if(dist<18&&dist>0.1){
+          velocities[ix]+=dx*0.0003;
+          velocities[ix+1]+=dy*0.0003;
         }
         pos[ix]+=velocities[ix];pos[ix+1]+=velocities[ix+1];pos[ix+2]+=velocities[ix+2];
         velocities[ix]*=0.98;velocities[ix+1]*=0.98;velocities[ix+2]*=0.98;
