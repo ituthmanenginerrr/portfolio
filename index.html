@@ -1642,5 +1642,29 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   });
 })();
 </script>
+<script>
+/* Diagnostic visuel — console uniquement */
+(function(){
+  function report(){
+    var vw = window.innerWidth;
+    var header = document.querySelector("nav") || document.querySelector("header");
+    var headerH = header ? header.offsetHeight : 0;
+    var main = document.querySelector(".wrap") || document.querySelector("main") || document.body;
+    var mainW = main ? main.offsetWidth : 0;
+    console.log("%c[Portfolio Debug]", "color:#4DA3FF;font-weight:bold");
+    console.log("Viewport width:", vw + "px");
+    console.log("Header height:", headerH + "px");
+    console.log("Main content width:", mainW + "px");
+    if(document.documentElement.scrollWidth > document.documentElement.clientWidth){
+      console.warn("⚠ Débordement horizontal détecté (scrollWidth " + document.documentElement.scrollWidth + " > clientWidth " + document.documentElement.clientWidth + ")");
+    } else {
+      console.log("✓ Pas de débordement horizontal");
+    }
+  }
+  if(document.readyState === "complete") report();
+  else window.addEventListener("load", report);
+  window.addEventListener("resize", report);
+})();
+</script>
 </body>
 </html>
