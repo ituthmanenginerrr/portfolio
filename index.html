@@ -84,19 +84,26 @@ a{color:var(--accent);text-decoration:none}
 a:hover{color:var(--accent-3)}
 :focus-visible{outline:2px solid var(--accent-3);outline-offset:3px;border-radius:2px}
 
-/* FIX: header compact 56px */
+/* FIX: header une seule ligne, burger mobile only */
+#site-header{position:fixed;top:0;left:0;right:0;width:100%;height:56px;z-index:10000;background:rgba(5,7,15,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(120,160,255,.1)}
+.nav-inner{max-width:1280px;height:100%;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:nowrap}
+.nav-logo{font-family:"JetBrains Mono",monospace;font-size:13px;color:#fff;letter-spacing:.08em;white-space:nowrap;flex-shrink:0}
+.nav-links{display:flex;align-items:center;justify-content:center;gap:18px;list-style:none;margin:0;padding:0;flex:1;min-width:0}
+.nav-links a{font-size:12.5px;color:#8DA0C0;text-decoration:none;white-space:nowrap}
+.nav-links a:hover{color:#E8EEF8}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-burger{display:none;background:transparent;border:0;width:32px;height:32px;cursor:pointer;flex-direction:column;justify-content:space-between;padding:6px}
+.nav-burger span{display:block;height:2px;background:#fff;border-radius:2px}
 body{padding-top:56px}
-nav{height:56px;min-height:56px;max-height:56px;padding:0 24px}
-nav .brand{font-size:13px;font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
-nav a{font-size:12px}
-@media (max-width:1023px){
-  body{padding-top:52px}
-  nav{height:52px;min-height:52px;max-height:52px}
-}
 @media (max-width:767px){
+  #site-header{height:48px}
   body{padding-top:48px}
-  nav{height:48px;min-height:48px;max-height:48px;padding:0 16px}
-  .nav-panel{top:48px;height:calc(100vh - 48px)}
+  .nav-inner{padding:0 16px}
+  .nav-links{display:none}
+  .nav-right .lang-toggle{display:none}
+  .nav-burger{display:flex}
+  .mobile-panel{display:none;position:fixed;top:48px;right:0;width:min(320px,100vw);height:calc(100vh - 48px);background:rgba(5,7,15,.96);backdrop-filter:blur(20px);flex-direction:column;padding:24px;gap:16px;z-index:10001;border-left:1px solid var(--line)}
+  .mobile-panel.open{display:flex}
 }
 .lang-toggle{display:inline-flex;background:var(--glass);border:1px solid var(--line);border-radius:100px;overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:12px}
 .lang-toggle button{background:transparent;border:0;color:var(--muted);padding:6px 12px;cursor:pointer;font-family:inherit;font-size:inherit;letter-spacing:.05em;transition:all .2s}
@@ -275,11 +282,11 @@ section>h2::before{content:"";width:34px;height:2px;background:linear-gradient(9
 .availability::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 10px var(--success);animation:pulse 2s ease-in-out infinite}
 
 footer{border-top:1px solid var(--line);padding:48px 0 32px;margin-top:48px;color:var(--muted);font-size:14px}
-.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;align-items:center}
-.footer-grid a{color:var(--muted)}
-.footer-grid a:hover{color:var(--accent-3)}
-.footer-copy{text-align:center;margin-top:28px;font-size:13px;opacity:.7}
-@media (max-width:767px){.footer-grid{grid-template-columns:1fr;text-align:center;gap:16px}}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 24px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-col h4{margin:0 0 8px;font-size:14px;color:#fff}
+.footer-bottom{text-align:center;font-size:13px;opacity:.7;padding-top:16px;border-top:1px solid var(--line)}
+@media (max-width:767px){.footer-grid{grid-template-columns:1fr;gap:28px;text-align:center}}
 
 .reveal{opacity:1;transform:none}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -330,25 +337,37 @@ footer{border-top:1px solid var(--line);padding:48px 0 32px;margin-top:48px;colo
 <div class="vignette"></div>
 
 <div class="wrap">
-  <nav>
-    <a href="#" class="brand">O. ELKHAZRAJE</a>
-    <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
-    <div class="nav-panel" id="nav-panel">
-      <div class="links">
-        <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
-        <a href="#expertise" data-fr="Expertise" data-en="Expertise">Expertise</a>
-        <a href="#blueprints" data-fr="Méthodologie" data-en="Methodology">Méthodologie</a>
-        <a href="#parcours" data-fr="Parcours" data-en="Journey">Parcours</a>
-        <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
-        <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
-        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+  <nav id="site-header">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">O. ELKHAZRAJE</a>
+      <ul class="nav-links">
+        <li><a href="#apropos" data-fr="À propos" data-en="About">À propos</a></li>
+        <li><a href="#expertise" data-fr="Expertise" data-en="Expertise">Expertise</a></li>
+        <li><a href="#blueprints" data-fr="Méthodologie" data-en="Methodology">Méthodologie</a></li>
+        <li><a href="#parcours" data-fr="Parcours" data-en="Journey">Parcours</a></li>
+        <li><a href="#projets" data-fr="Projets" data-en="Projects">Projets</a></li>
+        <li><a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a></li>
+        <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
         <div class="lang-toggle" role="group" aria-label="Language">
           <button type="button" id="lang-fr" aria-pressed="true">FR</button>
           <button type="button" id="lang-en" aria-pressed="false">EN</button>
         </div>
+        <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
+  <div class="mobile-panel" id="mobile-panel">
+    <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+    <a href="#expertise" data-fr="Expertise" data-en="Expertise">Expertise</a>
+    <a href="#blueprints" data-fr="Méthodologie" data-en="Methodology">Méthodologie</a>
+    <a href="#parcours" data-fr="Parcours" data-en="Journey">Parcours</a>
+    <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
+    <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
+    <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+    <div class="lang-toggle"><button type="button" id="lang-fr-m">FR</button><button type="button" id="lang-en-m">EN</button></div>
+  </div>
 
   <!-- HERO -->
   <header class="hero">
@@ -1330,12 +1349,14 @@ footer{border-top:1px solid var(--line);padding:48px 0 32px;margin-top:48px;colo
   </section>
 
   <footer>
-    <div class="footer-grid">
-      <div>Othman ELKHAZRAJE · Consultant ERP, Cloud & IA</div>
-      <div><a href="#apropos">À propos</a> · <a href="#projets">Projets</a> · <a href="#contact">Contact</a></div>
-      <div><a href="mailto:o.elkhazraje@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/othman-elkhazraje" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/ituthmanenginerrr" target="_blank" rel="noopener">GitHub</a></div>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Portfolio</h4><p><strong>Othman ELKHAZRAJE</strong></p><p>Consultant ERP, Cloud & IA</p><p>Casablanca, Maroc</p></div>
+        <div class="footer-col"><h4>Navigation</h4><a href="#apropos">À propos</a><br><a href="#projets">Projets</a><br><a href="#contact">Contact</a></div>
+        <div class="footer-col"><h4>Contact</h4><a href="mailto:o.elkhazraje@gmail.com">o.elkhazraje@gmail.com</a><br><a href="https://www.linkedin.com/in/othman-elkhazraje" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://github.com/ituthmanenginerrr" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+      <div class="footer-bottom">© 2026 · Othman ELKHAZRAJE · Fait à Casablanca</div>
     </div>
-    <div class="footer-copy">© 2026 · Fait à Casablanca · Portfolio v3.0</div>
   </footer>
 </div>
 
@@ -1695,24 +1716,24 @@ footer{border-top:1px solid var(--line);padding:48px 0 32px;margin-top:48px;colo
 })();
 </script>
 <script>
-/* FIX: burger menu + header scroll shadow */
+/* FIX: burger mobile only */
 (function(){
-  var burger=document.querySelector(".burger");
-  var panel=document.getElementById("nav-panel");
+  var header=document.getElementById("site-header");
+  var burger=document.getElementById("nav-burger");
+  var panel=document.getElementById("mobile-panel");
   if(burger&&panel){
     burger.addEventListener("click",function(){
       var open=panel.classList.toggle("open");
       burger.setAttribute("aria-expanded",open?"true":"false");
-      burger.textContent=open?"✕":"☰";
     });
     panel.querySelectorAll("a").forEach(function(a){
-      a.addEventListener("click",function(){ panel.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.textContent="☰"; });
+      a.addEventListener("click",function(){panel.classList.remove("open");burger.setAttribute("aria-expanded","false");});
     });
-    document.addEventListener("keydown",function(e){ if(e.key==="Escape"){ panel.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.textContent="☰"; } });
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"){panel.classList.remove("open");burger.setAttribute("aria-expanded","false");}});
   }
-  window.addEventListener("scroll",function(){
-    document.querySelector("nav").classList.toggle("scrolled", window.scrollY>50);
-  });
+  if(header){
+    window.addEventListener("scroll",function(){header.classList.toggle("scrolled",window.scrollY>50);},{passive:true});
+  }
 })();
 </script>
 </html>
