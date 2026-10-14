@@ -84,36 +84,27 @@ a{color:var(--accent);text-decoration:none}
 a:hover{color:var(--accent-3)}
 :focus-visible{outline:2px solid var(--accent-3);outline-offset:3px;border-radius:2px}
 
-/* FIX: header hauteur fixe + position stable */
-html,body{overflow-x:hidden;max-width:100vw}
-body{padding-top:72px}
-nav{position:fixed;top:0;left:0;right:0;width:100%;height:72px;min-height:72px;max-height:72px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;z-index:1000;background:rgba(5,7,15,.85);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--line);transition:box-shadow .2s}
-nav.scrolled{box-shadow:0 8px 32px rgba(0,0,0,.4)}
-nav .brand{font-family:"IBM Plex Serif",serif;font-weight:600;color:#fff;font-size:16px;white-space:nowrap}
-nav .links{display:flex;gap:16px;align-items:center;flex-wrap:nowrap}
-nav a{color:var(--muted);font-weight:500;font-size:13.5px;white-space:nowrap}
-nav a:hover{color:var(--ink)}
-.burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;padding:8px}
-.nav-panel{display:contents}
+/* FIX: header compact 56px */
+body{padding-top:56px}
+nav{height:56px;min-height:56px;max-height:56px;padding:0 24px}
+nav .brand{font-size:13px;font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
+nav a{font-size:12px}
 @media (max-width:1023px){
-  body{padding-top:64px}
-  nav{height:64px;min-height:64px;max-height:64px}
+  body{padding-top:52px}
+  nav{height:52px;min-height:52px;max-height:52px}
 }
 @media (max-width:767px){
-  body{padding-top:56px}
-  nav{height:56px;min-height:56px;max-height:56px;padding:0 16px}
-  .burger{display:block}
-  .nav-panel{display:none;position:fixed;top:56px;right:0;width:min(320px,100vw);height:calc(100vh - 56px);background:rgba(5,7,15,.96);backdrop-filter:blur(20px);flex-direction:column;align-items:flex-start;padding:24px;gap:16px;z-index:999;border-left:1px solid var(--line);transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
-  .nav-panel.open{display:flex;transform:translateX(0)}
-  nav .links{flex-direction:column;align-items:flex-start;width:100%}
+  body{padding-top:48px}
+  nav{height:48px;min-height:48px;max-height:48px;padding:0 16px}
+  .nav-panel{top:48px;height:calc(100vh - 48px)}
 }
 .lang-toggle{display:inline-flex;background:var(--glass);border:1px solid var(--line);border-radius:100px;overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:12px}
 .lang-toggle button{background:transparent;border:0;color:var(--muted);padding:6px 12px;cursor:pointer;font-family:inherit;font-size:inherit;letter-spacing:.05em;transition:all .2s}
 .lang-toggle button[aria-pressed="true"]{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
 
-.hero{padding:80px 0 48px;position:relative}
-.hero .eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-3);letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px;display:inline-block;padding:7px 16px;border:1px solid rgba(34,211,238,.3);border-radius:100px;background:rgba(34,211,238,.05)}
-.hero h1{font-size:clamp(32px,5.8vw,58px);max-width:20em;letter-spacing:-.025em;color:#ffffff;-webkit-text-fill-color:#ffffff;background:none}
+/* FIX: hero compact — élimine le vide sous le header */
+.hero{padding:32px 0 40px;position:relative}
+.hero h1{font-size:clamp(34px,4.5vw,48px);max-width:16em}
 .hero p.lead{color:#d0d8f0;font-size:18px}
 .hero p.lead{max-width:42em;color:var(--muted);font-size:18px;margin:24px 0 0}
 .hero-actions{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
@@ -335,13 +326,12 @@ footer{border-top:1px solid var(--line);padding:48px 0 32px;margin-top:48px;colo
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-<a href="https://calendly.com/othman-elkhazraje" class="cta-fixe" target="_blank" rel="noopener" data-fr="📅 Prendre RDV" data-en="📅 Book a call">📅 Prendre RDV</a>
 <canvas id="bg-canvas"></canvas>
 <div class="vignette"></div>
 
 <div class="wrap">
   <nav>
-    <a href="#" class="brand">Othman ELKHAZRAJE</a>
+    <a href="#" class="brand">O. ELKHAZRAJE</a>
     <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
     <div class="nav-panel" id="nav-panel">
       <div class="links">
@@ -362,15 +352,13 @@ footer{border-top:1px solid var(--line);padding:48px 0 32px;margin-top:48px;colo
 
   <!-- HERO -->
   <header class="hero">
-    <span class="eyebrow" data-fr="◆ Architecte SI & IA | Modernisation ERP & IA Décisionnelle" data-en="◆ Enterprise Systems & AI Architect | ERP Modernization & Decision AI">◆ Architecte SI & IA | Modernisation ERP & IA Décisionnelle</span>
-    <h1 data-fr="Azure Solutions Architect Expert & Doctorant en IA (NLP / LLM)" data-en="Azure Solutions Architect Expert & PhD Researcher in AI (NLP / LLM)">Azure Solutions Architect Expert & Doctorant en IA (NLP / LLM)</h1>
-    <p class="lead" data-fr="Optimiser, sécuriser et automatiser les opérations logistiques et métiers dans les secteurs exigeants (Pharmaceutique, Automobile).<br><br><strong>ERP & SI :</strong> Modernisation et interconnexion de systèmes Odoo et Sage X3.<br><strong>Infrastructures & Sécurité :</strong> Architecture Cloud Azure, conformité et haute disponibilité.<br><strong>IA Avancée :</strong> Déploiement de modèles NLP/LLM et systèmes décisionnels sur-mesure." data-en="Optimize, secure and automate logistics and business operations in demanding sectors (Pharma, Automotive).<br><br><strong>ERP & IS:</strong> Modernization and interconnection of Odoo and Sage X3 systems.<br><strong>Infrastructure & Security:</strong> Azure Cloud architecture, compliance and high availability.<br><strong>Advanced AI:</strong> Deployment of NLP/LLM models and custom decision systems.">Optimiser, sécuriser et automatiser les opérations logistiques et métiers dans les secteurs exigeants (Pharmaceutique, Automobile).<br><br><strong>ERP & SI :</strong> Modernisation et interconnexion de systèmes Odoo et Sage X3.<br><strong>Infrastructures & Sécurité :</strong> Architecture Cloud Azure, conformité et haute disponibilité.<br><strong>IA Avancée :</strong> Déploiement de modèles NLP/LLM et systèmes décisionnels sur-mesure.</p>
+    <span class="eyebrow" data-fr="◆ Consultant ERP · Cloud · Data & IA" data-en="◆ ERP · Cloud · Data & AI Consultant">◆ Consultant ERP · Cloud · Data & IA</span>
+    <h1 data-fr="Consultant ERP, Cloud & IA" data-en="ERP, Cloud & AI Consultant">Consultant ERP, Cloud & IA</h1>
+    <p class="lead" data-fr="J'optimise, sécurise et automatise les SI critiques." data-en="I optimize, secure and automate critical information systems.">J'optimise, sécurise et automatise les SI critiques.</p>
 
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary" data-fr="→ Parler de mon projet" data-en="→ Discuss my project">→ Parler de mon projet</a>
-      <a href="#projets" class="btn-secondary" data-fr="Voir mes réalisations" data-en="View my work">Voir mes réalisations</a>
-      <a href="https://calendly.com/othman-elkhazraje" target="_blank" rel="noopener" class="btn-secondary" data-fr="📅 Réserver 15 min" data-en="📅 Book 15 min">📅 Réserver 15 min</a>
-      <a href="cv-othman-elkhazraje.pdf" download class="btn-secondary" data-fr="📄 CV (PDF)" data-en="📄 CV (PDF)">📄 CV (PDF)</a>
+      <a href="#contact" class="btn-primary" data-fr="→ Discuter d'un projet" data-en="→ Discuss a project">→ Discuter d'un projet</a>
+      <a href="cv-othman-elkhazraje.pdf" download class="btn-secondary" data-fr="📄 Demander le CV" data-en="📄 Request CV">📄 Demander le CV</a>
     </div>
 
     <p class="who">
