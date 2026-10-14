@@ -84,10 +84,29 @@ a{color:var(--accent);text-decoration:none}
 a:hover{color:var(--accent-3)}
 :focus-visible{outline:2px solid var(--accent-3);outline-offset:3px;border-radius:2px}
 
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:14px;position:sticky;top:0;z-index:10;background:rgba(5,7,15,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-nav .links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-nav a{color:var(--muted);font-weight:500;letter-spacing:.02em;transition:color .2s;font-size:13.5px}
+/* FIX: header hauteur fixe + position stable */
+html,body{overflow-x:hidden;max-width:100vw}
+body{padding-top:72px}
+nav{position:fixed;top:0;left:0;right:0;width:100%;height:72px;min-height:72px;max-height:72px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;z-index:1000;background:rgba(5,7,15,.85);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--line);transition:box-shadow .2s}
+nav.scrolled{box-shadow:0 8px 32px rgba(0,0,0,.4)}
+nav .brand{font-family:"IBM Plex Serif",serif;font-weight:600;color:#fff;font-size:16px;white-space:nowrap}
+nav .links{display:flex;gap:16px;align-items:center;flex-wrap:nowrap}
+nav a{color:var(--muted);font-weight:500;font-size:13.5px;white-space:nowrap}
 nav a:hover{color:var(--ink)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;padding:8px}
+.nav-panel{display:contents}
+@media (max-width:1023px){
+  body{padding-top:64px}
+  nav{height:64px;min-height:64px;max-height:64px}
+}
+@media (max-width:767px){
+  body{padding-top:56px}
+  nav{height:56px;min-height:56px;max-height:56px;padding:0 16px}
+  .burger{display:block}
+  .nav-panel{display:none;position:fixed;top:56px;right:0;width:min(320px,100vw);height:calc(100vh - 56px);background:rgba(5,7,15,.96);backdrop-filter:blur(20px);flex-direction:column;align-items:flex-start;padding:24px;gap:16px;z-index:999;border-left:1px solid var(--line);transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+  .nav-panel.open{display:flex;transform:translateX(0)}
+  nav .links{flex-direction:column;align-items:flex-start;width:100%}
+}
 .lang-toggle{display:inline-flex;background:var(--glass);border:1px solid var(--line);border-radius:100px;overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:12px}
 .lang-toggle button{background:transparent;border:0;color:var(--muted);padding:6px 12px;cursor:pointer;font-family:inherit;font-size:inherit;letter-spacing:.05em;transition:all .2s}
 .lang-toggle button[aria-pressed="true"]{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
@@ -317,17 +336,21 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 
 <div class="wrap">
   <nav>
-    <div class="links">
-      <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
-      <a href="#expertise" data-fr="Expertise" data-en="Expertise">Expertise</a>
-      <a href="#blueprints" data-fr="Méthodologie" data-en="Methodology">Méthodologie</a>
-      <a href="#parcours" data-fr="Parcours" data-en="Journey">Parcours</a>
-      <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
-      <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
-      <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <button type="button" id="lang-fr" aria-pressed="true">FR</button>
-        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+    <a href="#" class="brand">Othman ELKHAZRAJE</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    <div class="nav-panel" id="nav-panel">
+      <div class="links">
+        <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+        <a href="#expertise" data-fr="Expertise" data-en="Expertise">Expertise</a>
+        <a href="#blueprints" data-fr="Méthodologie" data-en="Methodology">Méthodologie</a>
+        <a href="#parcours" data-fr="Parcours" data-en="Journey">Parcours</a>
+        <a href="#projets" data-fr="Projets" data-en="Projects">Projets</a>
+        <a href="#competences" data-fr="Compétences" data-en="Skills">Compétences</a>
+        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" id="lang-fr" aria-pressed="true">FR</button>
+          <button type="button" id="lang-en" aria-pressed="false">EN</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -1314,7 +1337,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   </section>
 
   <footer>
-    Othman ELKHAZRAJE · Consultant ERP, Cloud & IA · Casablanca, Maroc
+    <div class="footer-grid">
+      <div>Othman ELKHAZRAJE · Consultant ERP, Cloud & IA</div>
+      <div><a href="#apropos">À propos</a> · <a href="#projets">Projets</a> · <a href="#contact">Contact</a></div>
+      <div><a href="mailto:o.elkhazraje@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/othman-elkhazraje" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/ituthmanenginerrr" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+    <div class="footer-copy">© 2026 · Fait à Casablanca · Portfolio v3.0</div>
   </footer>
 </div>
 
@@ -1673,5 +1701,25 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
   window.addEventListener("resize", report);
 })();
 </script>
-</body>
+<script>
+/* FIX: burger menu + header scroll shadow */
+(function(){
+  var burger=document.querySelector(".burger");
+  var panel=document.getElementById("nav-panel");
+  if(burger&&panel){
+    burger.addEventListener("click",function(){
+      var open=panel.classList.toggle("open");
+      burger.setAttribute("aria-expanded",open?"true":"false");
+      burger.textContent=open?"✕":"☰";
+    });
+    panel.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click",function(){ panel.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.textContent="☰"; });
+    });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape"){ panel.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.textContent="☰"; } });
+  }
+  window.addEventListener("scroll",function(){
+    document.querySelector("nav").classList.toggle("scrolled", window.scrollY>50);
+  });
+})();
+</script>
 </html>
