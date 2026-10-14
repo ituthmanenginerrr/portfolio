@@ -1762,4 +1762,27 @@ nav a:hover::after{width:100%}
   }
 })();
 </script>
+<script>
+/* ANIM: IntersectionObserver + stagger */
+(function(){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    document.querySelectorAll(".reveal,.reveal-left").forEach(function(el){el.classList.add("visible");});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target;
+        var delay=parseInt(el.dataset.delay||0,10);
+        setTimeout(function(){el.classList.add("visible");},delay);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:0.12,rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".reveal,.reveal-left").forEach(function(el,i){
+    if(!el.dataset.delay) el.dataset.delay=String((i%8)*60);
+    io.observe(el);
+  });
+})();
+</script>
 </html>
